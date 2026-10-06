@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Виртуальное окружение
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Переменные окружения и секреты (ключи, пароли БД)
+.env
+.env.*
+!.env.example
+!.env.template
+secrets.json
+
+# Данные PostgreSQL и локальные дампы
+*.sql
+*.dump
+*.tar
+pgdata/
+postgres_data/
+.pgdata/
+*.db
+*.sqlite3
+
+# Логи и кэш FastAPI / приложения
+*.log
+logs/
+.cache
+
+# Тестирование, линтеры и типизация
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+
+# IDE и операционные системы
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
