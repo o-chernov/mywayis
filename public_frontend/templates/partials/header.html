@@ -1,0 +1,60 @@
+{% load i18n site_tags %}
+{% include "partials/icons.html" %}
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="{% url 'pages:landing' %}">
+      <span class="brand__mark" aria-hidden="true">M</span>
+      <span class="brand__name">MyWay</span>
+    </a>
+
+    <nav class="nav" aria-label="{% translate 'Основная навигация' %}">
+      <a class="nav__link {% nav_active 'pages:features' %}" href="{% url 'pages:features' %}">{% translate "Возможности" %}</a>
+      <a class="nav__link {% nav_active 'pages:pricing' %}" href="{% url 'pages:pricing' %}">{% translate "Тарифы" %}</a>
+      <a class="nav__link {% nav_active 'pages:faq' %}" href="{% url 'pages:faq' %}">{% translate "Вопросы" %}</a>
+      <a class="nav__link {% nav_active 'pages:about' %}" href="{% url 'pages:about' %}">{% translate "О проекте" %}</a>
+      <a class="nav__link {% nav_active 'contacts:contacts' %}" href="{% url 'contacts:contacts' %}">{% translate "Контакты" %}</a>
+    </nav>
+
+    <div class="header__actions">
+      {% include "partials/lang_switch.html" %}
+      {% include "partials/theme_toggle.html" %}
+
+      <a class="btn btn--ghost btn--sm header__cta" href="{{ app_url }}/login">{% translate "Войти" %}</a>
+      {% if site_settings.registration_open %}
+        <a class="btn btn--primary btn--sm header__cta" href="{% url 'accounts:register' %}">{% translate "Начать бесплатно" %}</a>
+      {% endif %}
+
+      <button
+        type="button"
+        class="icon-btn burger"
+        data-burger
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="{% translate 'Открыть меню' %}"
+      >
+        <svg width="18" height="18" aria-hidden="true"><use href="#i-menu" /></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu" data-mobile-menu data-open="false">
+    <div class="container">
+      <ul class="mobile-menu__list">
+        <li><a class="mobile-menu__link" href="{% url 'pages:features' %}">{% translate "Возможности" %}</a></li>
+        <li><a class="mobile-menu__link" href="{% url 'pages:pricing' %}">{% translate "Тарифы" %}</a></li>
+        <li><a class="mobile-menu__link" href="{% url 'pages:faq' %}">{% translate "Вопросы" %}</a></li>
+        <li><a class="mobile-menu__link" href="{% url 'pages:about' %}">{% translate "О проекте" %}</a></li>
+        <li><a class="mobile-menu__link" href="{% url 'contacts:contacts' %}">{% translate "Контакты" %}</a></li>
+        <li><a class="mobile-menu__link" href="{% url 'legal:index' %}">{% translate "Документы" %}</a></li>
+      </ul>
+
+      <div style="display: grid; gap: var(--space-3)">
+        <a class="btn btn--secondary btn--block" href="{{ app_url }}/login">{% translate "Войти" %}</a>
+        {% if site_settings.registration_open %}
+          <a class="btn btn--primary btn--block" href="{% url 'accounts:register' %}">{% translate "Начать бесплатно" %}</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</header>

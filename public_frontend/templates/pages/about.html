@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% translate "О проекте" %} — MyWay{% endblock %}
+{% block description %}{% translate "Зачем мы делаем MyWay, из чего он состоит и как с нами связаться." %}{% endblock %}
+
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static 'css/landing.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">{% translate "О проекте" %}</span>
+        <h1>{% translate "Зачем мы это делаем" %}</h1>
+      </div>
+
+      <div class="prose">
+        <p>
+          {% blocktranslate %}MyWay вырос из простого наблюдения: разработчик может подробно рассказать, что он сделал за неделю, но почти никогда — сколько времени на это ушло и куда оно распределилось. Инструменты учёта времени либо требуют нажимать «старт» и «стоп» вручную, либо превращаются в надзор со стороны работодателя.{% endblocktranslate %}
+        </p>
+
+        <p>
+          {% blocktranslate %}Мы хотели третий вариант: данные собираются сами, принадлежат человеку, а не компании, и показываются так, чтобы из них можно было что-то понять. Отсюда три решения, на которых держится сервис.{% endblocktranslate %}
+        </p>
+
+        <h2>{% translate "Данные берём, а не собираем" %}</h2>
+        <p>
+          {% blocktranslate %}Мы не пишем своего агента и не просим ставить ещё одну программу. Источник — WakaTime, который уже стоит у большинства и уже считает время. MyWay получает от него агрегаты и превращает их в графики. Код, имена файлов и содержимое проектов к нам не попадают.{% endblocktranslate %}
+        </p>
+
+        <h2>{% translate "Соревнование вместо отчётности" %}</h2>
+        <p>
+          {% blocktranslate %}Личная статистика быстро надоедает: график посмотрели, кивнули, забыли. Поэтому есть сезонный турнир — добровольный и с чистого листа каждые три месяца. Он не про переработки: в таблице видно и регулярность, и стрик, а сравниваться можно внутри своей специальности.{% endblocktranslate %}
+        </p>
+
+        <h2>{% translate "Объяснение важнее цифры" %}</h2>
+        <p>
+          {% blocktranslate %}«У вас 32 часа за неделю» — бесполезная фраза. «Вы просели во вторник, потому что переключались между четырьмя проектами» — уже повод что-то поменять. Поэтому на платном тарифе есть AI-агент: он читает вашу статистику и каждое утро присылает короткий разбор.{% endblocktranslate %}
+        </p>
+
+        <h2>{% translate "Где мы сейчас" %}</h2>
+        <p>
+          {% blocktranslate %}Проект молодой и развивается открыто. Работает интеграция с WakaTime, аналитика, турнир и переписка. В ближайших планах — интеграции с GitHub, GitLab, Figma, Jira и Toggl, чтобы учитывать и то, что не видит редактор кода.{% endblocktranslate %}
+        </p>
+
+        <p>
+          {% blocktranslate %}Если чего-то не хватает или что-то работает не так — напишите. На маленьком проекте письмо пользователя доходит до того, кто пишет код, за минуты.{% endblocktranslate %}
+        </p>
+      </div>
+
+      {% if site_settings.company_name or site_settings.company_inn %}
+        <div class="card" style="margin-top: 40px; max-width: 640px">
+          <h3 class="card__title">{% translate "Реквизиты" %}</h3>
+          <div class="card__text" style="display: grid; gap: var(--space-2)">
+            {% if site_settings.company_name %}<div>{{ site_settings.company_name }}</div>{% endif %}
+            {% if site_settings.company_inn %}<div>{% translate "ИНН" %}: <span class="mono">{{ site_settings.company_inn }}</span></div>{% endif %}
+            {% if site_settings.company_ogrn %}<div>{% translate "ОГРНИП" %}: <span class="mono">{{ site_settings.company_ogrn }}</span></div>{% endif %}
+            {% if site_settings.company_address %}<div>{{ site_settings.company_address }}</div>{% endif %}
+            <div><a class="link" href="mailto:{{ site_settings.contact_email }}">{{ site_settings.contact_email }}</a></div>
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="cta" style="margin-top: 48px">
+        <h2 class="cta__title">{% translate "Попробуйте на своих данных" %}</h2>
+        <p class="lead cta__lead">{% translate "Минута на регистрацию, ещё минута на подключение." %}</p>
+        <div class="cta__actions">
+          {% if site_settings.registration_open %}
+            <a class="btn btn--primary btn--lg" href="{% url 'accounts:register' %}">{% translate "Создать аккаунт" %}</a>
+          {% endif %}
+          <a class="btn btn--secondary btn--lg" href="{% url 'contacts:contacts' %}">{% translate "Написать нам" %}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

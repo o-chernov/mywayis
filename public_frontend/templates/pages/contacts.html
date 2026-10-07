@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% translate "Контакты" %} — MyWay{% endblock %}
+{% block description %}{% translate "Напишите нам: вопрос по сервису, проблема с оплатой, сотрудничество или юридический запрос." %}{% endblock %}
+
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static 'css/landing.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">{% translate "Контакты" %}</span>
+        <h1>{% translate "Напишите нам" %}</h1>
+        <p class="lead" style="margin-top: var(--space-4)">
+          {% blocktranslate %}Проект небольшой, поэтому письмо читает тот, кто пишет код. Опишите вопрос подробно — так ответим точнее и быстрее.{% endblocktranslate %}
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div>
+          <div class="contact-card">
+            <span class="contact-card__icon"><svg width="18" height="18" aria-hidden="true"><use href="#i-mail" /></svg></span>
+            <div>
+              <div class="contact-card__title">{% translate "Почта" %}</div>
+              <div class="contact-card__text">
+                <a class="link" href="mailto:{{ site_settings.contact_email }}">{{ site_settings.contact_email }}</a>
+              </div>
+            </div>
+          </div>
+
+          {% if site_settings.contact_telegram %}
+            <div class="contact-card">
+              <span class="contact-card__icon"><svg width="18" height="18" aria-hidden="true"><use href="#i-message" /></svg></span>
+              <div>
+                <div class="contact-card__title">Telegram</div>
+                <div class="contact-card__text">{{ site_settings.contact_telegram }}</div>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if site_settings.support_hours %}
+            <div class="contact-card">
+              <span class="contact-card__icon"><svg width="18" height="18" aria-hidden="true"><use href="#i-clock" /></svg></span>
+              <div>
+                <div class="contact-card__title">{% translate "Когда отвечаем" %}</div>
+                <div class="contact-card__text">{{ site_settings.support_hours }}</div>
+              </div>
+            </div>
+          {% endif %}
+
+          <div class="contact-card">
+            <span class="contact-card__icon"><svg width="18" height="18" aria-hidden="true"><use href="#i-doc" /></svg></span>
+            <div>
+              <div class="contact-card__title">{% translate "Юридические вопросы" %}</div>
+              <div class="contact-card__text">
+                {% blocktranslate %}Соглашения, обработка данных и оферта — в разделе{% endblocktranslate %}
+                <a class="link" href="{% url 'legal:index' %}">{% translate "документы" %}</a>.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          {% if sent %}
+            <div class="alert alert--success" role="status" style="margin-bottom: var(--space-6)">
+              <svg class="alert__icon" width="17" height="17" aria-hidden="true"><use href="#i-check" /></svg>
+              <span>{% translate "Обращение отправлено. Ответим на указанную почту." %}</span>
+            </div>
+          {% endif %}
+
+          {% if form_error %}
+            <div class="alert alert--error" role="alert" style="margin-bottom: var(--space-6)">
+              <svg class="alert__icon" width="17" height="17" aria-hidden="true"><use href="#i-alert" /></svg>
+              <span>{{ form_error }}</span>
+            </div>
+          {% endif %}
+
+          <form class="form" method="post" novalidate>
+            {% csrf_token %}
+
+            <div class="hp-field" aria-hidden="true">
+              <label for="{{ form.website.id_for_label }}">{% translate "Не заполняйте это поле" %}</label>
+              {{ form.website }}
+            </div>
+            {{ form.rendered_at }}
+
+            {% for field in form.visible_fields %}
+              {% if field.name != 'website' %}
+                <div class="field">
+                  <label class="field__label" for="{{ field.id_for_label }}">
+                    {{ field.label }}{% if field.field.required %}<span class="field__required" aria-hidden="true"> *</span>{% endif %}
+                  </label>
+
+                  {{ field }}
+
+                  {% for error in field.errors %}
+                    <span class="field__error" role="alert">
+                      <svg width="13" height="13" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px"><use href="#i-alert" /></svg>
+                      {{ error }}
+                    </span>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            {% endfor %}
+
+            <button type="submit" class="btn btn--primary btn--lg">{% translate "Отправить" %}</button>
+
+            <p class="field__hint">
+              {% url 'legal:document' 'privacy' as privacy_url %}
+              {% blocktranslate %}Отправляя форму, вы соглашаетесь на обработку указанных данных в соответствии с <a class="link" href="{{ privacy_url }}">политикой конфиденциальности</a>.{% endblocktranslate %}
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

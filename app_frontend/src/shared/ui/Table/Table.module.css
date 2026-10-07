@@ -1,0 +1,99 @@
+.wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  font-size: var(--text-base);
+}
+
+.table thead th {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  background: var(--bg-surface);
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-subtle);
+  white-space: nowrap;
+}
+
+.table tbody td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  vertical-align: middle;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table tbody tr {
+  transition: background var(--transition-fast);
+}
+
+.hoverable tbody tr:hover td {
+  background: var(--bg-surface-2);
+}
+
+.numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Кнопка сортировки внутри заголовка. */
+.sortButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: inherit;
+  font: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  transition: color var(--transition-fast);
+}
+
+.sortButton:hover {
+  color: var(--text-primary);
+}
+
+.sortActive {
+  color: var(--accent-text);
+}
+
+.sortIcon {
+  opacity: 0.4;
+}
+
+.sortActive .sortIcon {
+  opacity: 1;
+}
+
+/* Строка текущего пользователя. */
+.highlighted td {
+  background: var(--accent-subtle);
+}
+
+.highlighted:hover td {
+  background: var(--accent-subtle);
+}
+
+/* Залипшая внизу строка «вы», когда пользователь вне видимого диапазона. */
+.stickySelf {
+  position: sticky;
+  bottom: 0;
+  z-index: var(--z-sticky);
+}
+
+.stickySelf td {
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--accent-border);
+  box-shadow: 0 -6px 16px rgba(0, 0, 0, 0.18);
+}

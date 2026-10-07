@@ -1,0 +1,11 @@
+{% load i18n %}
+<div class="cookie-notice" data-cookie-notice hidden role="region" aria-label="{% translate 'Уведомление о файлах cookie' %}">
+  <p>
+    {% url 'legal:document' 'cookies' as cookies_url %}
+    {% blocktranslate %}Мы используем только технические cookie — они нужны, чтобы запомнить язык и тему. Аналитику и рекламные трекеры не подключаем.{% endblocktranslate %}
+    <a class="link" href="{{ cookies_url }}">{% translate "Подробнее" %}</a>
+  </p>
+  <div class="cookie-notice__actions">
+    <button type="button" class="btn btn--primary btn--sm" data-cookie-accept>{% translate "Понятно" %}</button>
+  </div>
+</div>

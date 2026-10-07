@@ -1,0 +1,53 @@
+{
+  "specialty": {
+    "title": "Tell us what you do",
+    "subtitle": "We use your specialty to preselect tracking tags and place you in the right leaderboard filter.",
+    "descriptionLabel": "Describe your path",
+    "descriptionOptional": "optional",
+    "descriptionPlaceholder": "For example: highload Python, moving into data engineering over the past year",
+    "descriptionHint": "Other members will see this on your profile",
+    "counter": "{{current}} / {{max}}",
+    "submit": "Continue"
+  },
+  "tourInvite": {
+    "title": "Want a quick tour?",
+    "text": "Six short steps: where your stats live, how to connect WakaTime and how to join the tournament. Under a minute.",
+    "start": "Show me",
+    "skip": "Skip"
+  },
+  "tour": {
+    "progress": "Step {{current}} of {{total}}",
+    "skipAll": "Skip all",
+    "finish": "Done",
+    "steps": {
+      "nav": {
+        "title": "Navigation",
+        "text": "Every section lives here. The badge on Messages counts unread threads."
+      },
+      "dashboard": {
+        "title": "Dashboard",
+        "text": "Your main summary: time in code, languages and projects, and the hours when you are most productive."
+      },
+      "integrations": {
+        "title": "Start here",
+        "text": "Until WakaTime is connected the dashboard stays empty. It takes a minute — all you need is an API key."
+      },
+      "leaderboard": {
+        "title": "Tournament",
+        "text": "A seasonal table of members. A season is a time of year; counters reset when it ends, but results are kept in history."
+      },
+      "messages": {
+        "title": "Messages",
+        "text": "Chat with other members and with support. On Pro, the AI agent posts a daily breakdown of your stats here."
+      },
+      "settings": {
+        "title": "Settings",
+        "text": "Profile, privacy, notifications and subscription. Theme and language live here too."
+      }
+    }
+  },
+  "restart": {
+    "label": "Replay the tour",
+    "hint": "We will show the same six hints from the start"
+  }
+}

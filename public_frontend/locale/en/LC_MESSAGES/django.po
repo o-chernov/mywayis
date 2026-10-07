@@ -1,0 +1,1560 @@
+# Каталог переводов публичного сайта MyWay.
+#
+# Исходные строки — на русском: команда русскоязычная, и шаблоны должны
+# читаться без словаря. Здесь переводится только английская версия.
+#
+# Синхронизация:  python manage.py i18n_sync
+# Проверка:       python manage.py check_translations
+# Компиляция:     python manage.py compile_translations
+msgid ""
+msgstr ""
+"Project-Id-Version: myway-public-site 1.0\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/pages/landing.html
+msgid "1 дек — 28 фев"
+msgstr "1 Dec — 28 Feb"
+
+#: templates/pages/landing.html
+msgid "1 июн — 31 авг"
+msgstr "1 Jun — 31 Aug"
+
+#: templates/pages/landing.html
+msgid "1 мар — 31 мая"
+msgstr "1 Mar — 31 May"
+
+#: templates/pages/landing.html
+msgid "1 сен — 30 ноя"
+msgstr "1 Sep — 30 Nov"
+
+#: templates/partials/preview.html
+msgid "12 дней"
+msgstr "12 days"
+
+#: templates/pages/landing.html
+msgid "AI-агент"
+msgstr "AI agent"
+
+#: templates/pages/features.html
+msgid "AI-агент, который читает ваши цифры"
+msgstr "An AI agent that reads your numbers"
+
+#: templates/pages/features.html
+msgid "API-ключ WakaTime хранится в зашифрованном виде и используется только для чтения"
+msgstr "Your WakaTime API key is stored encrypted and used for reading only"
+
+#: apps/legal/models.py
+msgid "Acceptable Use Policy"
+msgstr "Acceptable Use Policy"
+
+#: apps/legal/models.py
+msgid "DMCA / Copyright Policy"
+msgstr "DMCA / Copyright Policy"
+
+#: templates/legal/index.html
+msgid "Documents are prepared under United States law. Each one shows its version and effective date."
+msgstr "Documents are prepared under United States law. Each one shows its version and effective date."
+
+#: apps/core/models.py
+msgid "Email поддержки"
+msgstr "Support email"
+
+#: templates/pages/pricing.html
+msgid "Free — вся аналитика и участие в турнире бесплатно. Pro — 490 ₽ в месяц: ежедневный разбор от AI-агента, углублённая аналитика и экспорт."
+msgstr "Free — all analytics and the tournament at no cost. Pro — 490 ₽ a month: a daily AI review, deeper analytics and export."
+
+#: apps/core/models.py
+msgid "ID Яндекс.Метрики"
+msgstr "Yandex.Metrica ID"
+
+#: apps/legal/models.py
+msgid "Markdown: ## заголовки, списки, таблицы, **выделение**."
+msgstr "Markdown: ## headings, lists, tables, **emphasis**."
+
+#: templates/pages/about.html
+msgid "MyWay вырос из простого наблюдения: разработчик может подробно рассказать, что он сделал за неделю, но почти никогда — сколько времени на это ушло и куда оно распределилось. Инструменты учёта времени либо требуют нажимать «старт» и «стоп» вручную, либо превращаются в надзор со стороны работодателя."
+msgstr "MyWay grew out of a simple observation: a developer can describe in detail what they did during the week, but almost never how much time it took or how it was distributed. Time-tracking tools either require pressing start and stop by hand, or turn into employer surveillance."
+
+#: templates/pages/landing.html
+msgid "MyWay забирает данные из WakaTime и превращает их в понятные графики: куда уходит день, на какие языки и проекты, в какие часы вы работаете лучше всего. И ставит вас в сезонный турнир с другими разработчиками и дизайнерами."
+msgstr "MyWay pulls your data from WakaTime and turns it into charts that actually read: where the day goes, which languages and projects take it, and the hours when you work best. Then it puts you in a seasonal tournament with other developers and designers."
+
+#: templates/base.html
+msgid "MyWay забирает данные из WakaTime и превращает их в понятные графики: сколько времени уходит в код, на какие языки и проекты, в какие часы вы продуктивнее. Плюс сезонный турнир с другими разработчиками."
+msgstr "MyWay pulls your data from WakaTime and turns it into charts that actually read: how much time goes into code, which languages and projects take it, and when you are most productive. Plus a seasonal tournament with other developers."
+
+#: templates/pages/features.html
+msgid "MyWay не пытается заменить таск-трекер и не просит ничего заполнять руками. Он берёт уже собранные данные и отвечает на вопросы, которые обычно остаются без ответа."
+msgstr "MyWay does not try to replace your issue tracker and never asks you to fill anything in by hand. It takes data that is already being collected and answers the questions that usually go unanswered."
+
+#: templates/base.html
+msgid "MyWay — аналитика вашего времени в коде"
+msgstr "MyWay — analytics for your time in code"
+
+#: templates/pages/pricing.html
+msgid "Pro подключается внутри личного кабинета. Оплата российскими картами и через СБП."
+msgstr "Pro is activated inside the dashboard. Payment by Russian cards and SBP."
+
+#: apps/core/models.py
+msgid "Telegram"
+msgstr "Telegram"
+
+#: templates/pages/features.html
+msgid "WakaTime закрывает время в редакторе. Остальное — в работе."
+msgstr "WakaTime covers editor time. The rest is in progress."
+
+#: templates/pages/landing.html
+msgid "WakaTime — плагин для редактора, который считает время работы. Он бесплатный и есть почти для всех IDE. Без него MyWay нечего показывать: свои данные мы не собираем, а берём готовые."
+msgstr "WakaTime is an editor plugin that measures your working time. It is free and exists for almost every IDE. Without it MyWay has nothing to show: we don't collect data ourselves, we use what is already there."
+
+#: apps/legal/urls.py
+msgid "dokumenty/"
+msgstr "legal/"
+
+#: apps/legal/urls.py
+msgid "dokumenty/<slug:slug>/"
+msgstr "legal/<slug:slug>/"
+
+#: apps/contacts/urls.py
+msgid "kontakty/"
+msgstr "contacts/"
+
+#: apps/pages/urls.py
+msgid "o-proekte/"
+msgstr "about/"
+
+#: apps/accounts/urls.py
+msgid "registraciya/"
+msgstr "register/"
+
+#: apps/accounts/urls.py
+msgid "registraciya/gotovo/"
+msgstr "register/done/"
+
+#: apps/pages/urls.py
+msgid "tarify/"
+msgstr "pricing/"
+
+#: apps/pages/urls.py
+msgid "voprosy/"
+msgstr "faq/"
+
+#: apps/pages/urls.py
+msgid "vozmozhnosti/"
+msgstr "features/"
+
+#: templates/pages/about.html
+msgid "«У вас 32 часа за неделю» — бесполезная фраза. «Вы просели во вторник, потому что переключались между четырьмя проектами» — уже повод что-то поменять. Поэтому на платном тарифе есть AI-агент: он читает вашу статистику и каждое утро присылает короткий разбор."
+msgstr "\"You had 32 hours this week\" is a useless sentence. \"You dropped on Tuesday because you switched between four projects\" is a reason to change something. That is why the paid plan has an AI agent: it reads your statistics and sends a short review every morning."
+
+#: templates/pages/features.html
+msgid "Агент отвечает на вопросы по вашей статистике прямо в чате: когда вы работали лучше всего в этом сезоне, что изменилось после смены проекта."
+msgstr "The agent answers questions about your stats right in the chat: when you worked best this season, what changed after switching projects."
+
+#: apps/core/models.py
+msgid "Адрес"
+msgstr "Address"
+
+#: templates/pages/pricing.html
+msgid "Аккаунт перейдёт на Free в конце оплаченного периода. Вся статистика, история сезонов и переписка сохраняются — закрываются только возможности Pro."
+msgstr "The account moves to Free at the end of the paid period. All stats, season history and messages are kept — only Pro features close."
+
+#: templates/accounts/register_done.html
+msgid "Аккаунт создан"
+msgstr "Account created"
+
+#: templates/pages/features.html
+msgid "Активность по дням"
+msgstr "Daily activity"
+
+#: templates/pages/landing.html
+msgid "Активность по дням, доли языков, топ проектов и тепловая карта часов. Всё на одном экране, без настройки дашбордов."
+msgstr "Daily activity, language shares, top projects and an hourly heatmap. All on one screen, with no dashboard building."
+
+#: apps/core/admin.py
+#: templates/pages/features.html
+msgid "Аналитика"
+msgstr "Analytics"
+
+#: templates/pages/pricing.html
+msgid "Аналитика бесплатно, разбор — за деньги"
+msgstr "Analytics free, the review costs money"
+
+#: apps/core/models.py
+msgid "Аналитика включена"
+msgstr "Analytics enabled"
+
+#: templates/pages/landing.html
+msgid "Аналитика времени в коде"
+msgstr "Coding time analytics"
+
+#: templates/partials/footer.html
+msgid "Аналитика рабочего времени для разработчиков и дизайнеров. Данные из WakaTime, понятные графики и сезонный турнир."
+msgstr "Working-time analytics for developers and designers. WakaTime data, charts that read, and a seasonal tournament."
+
+#: templates/pages/pricing.html
+msgid "Без ограничения по времени и без привязки карты"
+msgstr "No time limit and no card required"
+
+#: apps/accounts/forms.py
+msgid "Без согласия с условиями зарегистрироваться нельзя."
+msgstr "You cannot sign up without accepting the terms."
+
+#: templates/pages/landing.html
+msgid "Бесплатно навсегда, Pro — по желанию"
+msgstr "Free forever, Pro if you want it"
+
+#: templates/pages/landing.html
+msgid "Бесплатный тариф без ограничения по времени. Карта не нужна."
+msgstr "Free plan with no time limit. No card required."
+
+#: templates/pages/features.html
+msgid "Бесплатный тариф отдаёт всю аналитику и участие в турнире. Ограничения только у AI-агента."
+msgstr "The free plan gives you all the analytics and the tournament. Only the AI agent is limited."
+
+#: templates/pages/landing.html
+msgid "В пятницу вечером сложно ответить, куда ушла неделя"
+msgstr "On Friday evening it is hard to say where the week went"
+
+#: apps/legal/models.py
+msgid "Версия"
+msgstr "Version"
+
+#: templates/legal/document.html
+msgid "Версия %(version)s"
+msgstr "Version %(version)s"
+
+#: templates/legal/index.html
+msgid "Версия %(version)s · действует с %(date)s"
+msgstr "Version %(version)s · effective %(date)s"
+
+#: templates/pages/landing.html
+msgid "Весна"
+msgstr "Spring"
+
+#: templates/pages/faq.html
+msgid "Внутри личного кабинета, российскими картами или через СБП. Подписка продлевается автоматически, автопродление отключается в один клик."
+msgstr "Inside the dashboard, with Russian cards or via SBP. The subscription renews automatically; auto-renewal switches off in one click."
+
+#: templates/errors/404.html
+msgid "Возможно, ссылка устарела или в адресе опечатка. Загляните на главную — оттуда доступны все разделы."
+msgstr "The link may be outdated or the address mistyped. Head to the home page — every section is reachable from there."
+
+#: templates/pages/features.html
+#: templates/pages/landing.html
+#: templates/partials/footer.html
+#: templates/partials/header.html
+msgid "Возможности"
+msgstr "Features"
+
+#: templates/accounts/register_done.html
+msgid "Войдите в личный кабинет и укажите специальность — по ней мы подберём теги для отслеживания."
+msgstr "Sign in to the dashboard and set your specialty — we use it to preselect tracking tags."
+
+#: templates/accounts/register.html
+#: templates/partials/header.html
+msgid "Войти"
+msgstr "Sign in"
+
+#: templates/pages/faq.html
+#: templates/pages/landing.html
+#: templates/partials/header.html
+msgid "Вопросы"
+msgstr "FAQ"
+
+#: templates/pages/landing.html
+#: templates/pages/pricing.html
+msgid "Вопросы агенту в чате"
+msgstr "Ask the agent questions in chat"
+
+#: templates/pages/faq.html
+#: templates/partials/footer.html
+msgid "Вопросы и ответы"
+msgstr "Questions and answers"
+
+#: templates/legal/document.html
+msgid "Вопросы по документу — через <a class=\"link\" href=\"%(contacts_url)s\">форму обратной связи</a>, тема «Юридический вопрос»."
+msgstr "Questions about this document go through the <a class=\"link\" href=\"%(contacts_url)s\">contact form</a>, topic \"Legal question\"."
+
+#: apps/core/models.py
+msgid "Время ответа"
+msgstr "Response time"
+
+#: templates/pages/landing.html
+msgid "Все вопросы"
+msgstr "All questions"
+
+#: templates/partials/footer.html
+msgid "Все документы"
+msgstr "All documents"
+
+#: templates/partials/preview.html
+msgid "Всего за 30 дней"
+msgstr "Total for 30 days"
+
+#: templates/pages/pricing.html
+msgid "Всё из Free"
+msgstr "Everything in Free"
+
+#: templates/pages/landing.html
+msgid "Всё из Free и сверх того"
+msgstr "Everything in Free and more"
+
+#: templates/pages/pricing.html
+msgid "Всё, что есть в Free"
+msgstr "Everything Free includes"
+
+#: templates/pages/faq.html
+#: templates/pages/landing.html
+msgid "Вы видите мой код?"
+msgstr "Do you see my code?"
+
+#: templates/pages/landing.html
+msgid "Вы решаете, что видно"
+msgstr "You decide what is visible"
+
+#: templates/pages/landing.html
+msgid "Выберите, что считать"
+msgstr "Choose what to count"
+
+#: templates/pages/features.html
+msgid "Выйти можно в любой момент"
+msgstr "Leave whenever you want"
+
+#: apps/core/models.py
+msgid "Выключите, чтобы закрыть приём новых пользователей. Страница регистрации покажет сообщение ниже, кнопки в шапке скроются."
+msgstr "Switch off to stop accepting new users. The sign-up page will show the message below and the header buttons will disappear."
+
+#: templates/pages/about.html
+msgid "Где мы сейчас"
+msgstr "Where we are now"
+
+#: templates/pages/landing.html
+msgid "Год делится на четыре сезона"
+msgstr "The year splits into four seasons"
+
+#: templates/pages/faq.html
+msgid "Год делится на четыре сезона по временам года: зима с 1 декабря по конец февраля, весна с 1 марта, лето с 1 июня, осень с 1 сентября по 30 ноября. В конце сезона счётчик обнуляется, результат уходит в историю. Итоги года подводятся 1 декабря по четырём завершившимся сезонам."
+msgstr "The year splits into four seasons by time of year: winter from 1 December to the end of February, spring from 1 March, summer from 1 June, autumn from 1 September to 30 November. At the end of a season the counter resets and the result goes into history. Yearly results are settled on 1 December across the four completed seasons."
+
+#: templates/pages/landing.html
+msgid "Графики без лишнего"
+msgstr "Charts without clutter"
+
+#: templates/pages/features.html
+msgid "Графики показывают что произошло. Агент объясняет почему и что с этим делать. Отчёт приходит каждое утро в раздел «Сообщения» — как обычное письмо от коллеги."
+msgstr "Charts show what happened. The agent explains why, and what to do about it. The report arrives every morning in Messages, like a note from a colleague."
+
+#: templates/pages/faq.html
+msgid "Да, в настройках личного кабинета. Удаляются профиль, вся статистика и переписки. Действие необратимо, поэтому мы просим подтвердить его вводом username."
+msgstr "Yes, in dashboard settings. It removes the profile, all statistics and messages. The action is irreversible, so we ask you to confirm by typing your username."
+
+#: templates/pages/pricing.html
+msgid "Да, условия описаны в <a class=\"link\" href=\"%(refund_url)s\">политике возврата средств</a>. Если сервис не подошёл, напишите нам — разберёмся."
+msgstr "Yes, the terms are in the <a class=\"link\" href=\"%(refund_url)s\">refund policy</a>. If the service was not a fit, write to us and we will sort it out."
+
+#: templates/pages/landing.html
+msgid "Да, участие добровольное и выключается тумблером в разделе «Интеграции». Аналитика при этом остаётся полностью — она вообще не связана с таблицей."
+msgstr "Yes, participation is voluntary and switches off in the Integrations section. Analytics stay fully intact — they are not tied to the table at all."
+
+#: templates/pages/about.html
+msgid "Данные берём, а не собираем"
+msgstr "We take data, we don't harvest it"
+
+#: templates/pages/faq.html
+msgid "Данные и приватность"
+msgstr "Data and privacy"
+
+#: templates/pages/landing.html
+#: templates/pages/pricing.html
+msgid "Дашборд и все графики"
+msgstr "Dashboard and every chart"
+
+#: apps/legal/models.py
+msgid "Действует с"
+msgstr "Effective from"
+
+#: templates/legal/document.html
+msgid "Действует с %(date)s"
+msgstr "Effective %(date)s"
+
+#: apps/legal/views.py
+msgid "Документ не найден"
+msgstr "Document not found"
+
+#: templates/legal/document.html
+#: templates/legal/index.html
+#: templates/partials/footer.html
+#: templates/partials/header.html
+msgid "Документы"
+msgstr "Legal"
+
+#: templates/legal/index.html
+msgid "Документы ещё не опубликованы."
+msgstr "No documents have been published yet."
+
+#: templates/legal/index.html
+msgid "Документы составлены по законодательству Российской Федерации. У каждого указаны версия и дата вступления в силу."
+msgstr "The documents are prepared under the law of the Russian Federation. Each one shows its version and effective date."
+
+#: templates/pages/landing.html
+#: templates/pages/pricing.html
+msgid "Ежедневный разбор от AI-агента"
+msgstr "Daily review from the AI agent"
+
+#: templates/pages/faq.html
+msgid "Ежедневный разбор статистики от AI-агента, возможность задавать ему вопросы, углублённую аналитику и экспорт. Подробное сравнение — на <a class=\"link\" href=\"%(pricing_url)s\">странице тарифов</a>."
+msgstr "A daily statistics review from the AI agent, the ability to ask it questions, deeper analytics and export. A full comparison is on the <a class=\"link\" href=\"%(pricing_url)s\">pricing page</a>."
+
+#: templates/pages/faq.html
+msgid "Если ответа здесь нет — напишите, мы добавим его на эту страницу."
+msgstr "If the answer isn't here, write to us and we will add it to this page."
+
+#: templates/pages/about.html
+msgid "Если чего-то не хватает или что-то работает не так — напишите. На маленьком проекте письмо пользователя доходит до того, кто пишет код, за минуты."
+msgstr "If something is missing or broken, write to us. On a small project a user's email reaches the person writing the code within minutes."
+
+#: templates/pages/pricing.html
+msgid "Есть ли скидки для команд?"
+msgstr "Are there team discounts?"
+
+#: apps/legal/models.py
+msgid "Заголовок"
+msgstr "Title"
+
+#: apps/core/models.py
+msgid "Заголовок при закрытой регистрации"
+msgstr "Heading when registration is closed"
+
+#: templates/pages/faq.html
+msgid "Задать вопрос"
+msgstr "Ask a question"
+
+#: templates/pages/about.html
+msgid "Зачем мы делаем MyWay, из чего он состоит и как с нами связаться."
+msgstr "Why we build MyWay, what it consists of and how to reach us."
+
+#: templates/pages/about.html
+msgid "Зачем мы это делаем"
+msgstr "Why we build this"
+
+#: templates/pages/landing.html
+msgid "Зачем это нужно"
+msgstr "Why it matters"
+
+#: templates/pages/landing.html
+msgid "Зима"
+msgstr "Winter"
+
+#: apps/core/models.py
+#: templates/pages/about.html
+msgid "ИНН"
+msgstr "Tax ID (INN)"
+
+#: apps/legal/models.py
+msgid "Идентификатор"
+msgstr "Identifier"
+
+#: apps/contacts/models.py
+msgid "Имя"
+msgstr "Name"
+
+#: templates/pages/features.html
+#: templates/pages/landing.html
+msgid "Интеграции"
+msgstr "Integrations"
+
+#: templates/pages/pricing.html
+msgid "История всех прошлых сезонов"
+msgstr "History of every past season"
+
+#: templates/pages/landing.html
+msgid "История сезонов"
+msgstr "Season history"
+
+#: templates/pages/landing.html
+msgid "История сезонов показывает движение за год, а не только за неделю"
+msgstr "Season history shows movement over a year, not just a week"
+
+#: templates/pages/landing.html
+msgid "Итоги года подводятся 1 декабря по четырём завершившимся сезонам."
+msgstr "Yearly results are settled on 1 December across the four completed seasons."
+
+#: templates/pages/landing.html
+msgid "Каждое утро разбирает вчерашний день: что изменилось, где просела концентрация, какой день выбился из ритма. Тариф Pro."
+msgstr "Every morning it reviews the previous day: what changed, where focus dropped, which day broke the rhythm. Pro plan."
+
+#: templates/pages/features.html
+msgid "Каждый сезон — чистый лист. Прошлые результаты сохраняются, в декабре подводится годовой итог."
+msgstr "Every season is a clean slate. Past results are kept, and the yearly total is settled in December."
+
+#: templates/pages/faq.html
+msgid "Как быстро появятся первые графики?"
+msgstr "How soon do the first charts appear?"
+
+#: apps/contacts/forms.py
+msgid "Как к вам обращаться"
+msgstr "What should we call you"
+
+#: templates/pages/landing.html
+msgid "Как обычно"
+msgstr "The usual way"
+
+#: templates/pages/faq.html
+msgid "Как оплатить?"
+msgstr "How do I pay?"
+
+#: templates/pages/faq.html
+msgid "Как устроены сезоны?"
+msgstr "How do seasons work?"
+
+#: templates/pages/faq.html
+#: templates/pages/landing.html
+msgid "Как это работает"
+msgstr "How it works"
+
+#: templates/pages/faq.html
+msgid "Ключ хранится в зашифрованном виде и используется только для чтения статистики. Отозвать его можно в любой момент в настройках WakaTime — тогда мы просто перестанем получать данные. В интерфейсе ключ показывается замаскированным."
+msgstr "The key is stored encrypted and used only to read statistics. You can revoke it at any moment in WakaTime settings — we simply stop receiving data. In the interface the key is shown masked."
+
+#: templates/pages/contacts.html
+msgid "Когда отвечаем"
+msgstr "When we reply"
+
+#: templates/partials/footer.html
+msgid "Компания"
+msgstr "Company"
+
+#: apps/core/admin.py
+#: templates/pages/contacts.html
+#: templates/partials/footer.html
+#: templates/partials/header.html
+msgid "Контакты"
+msgstr "Contacts"
+
+#: apps/legal/models.py
+msgid "Краткое описание"
+msgstr "Short description"
+
+#: templates/pages/faq.html
+msgid "Кто видит мою статистику?"
+msgstr "Who can see my statistics?"
+
+#: apps/accounts/forms.py
+msgid "Латиница, цифры, точка, дефис и подчёркивание. Его увидят в лидерборде."
+msgstr "Latin letters, digits, dot, hyphen and underscore. It will be visible on the leaderboard."
+
+#: templates/pages/landing.html
+msgid "Лето"
+msgstr "Summer"
+
+#: templates/pages/about.html
+msgid "Личная статистика быстро надоедает: график посмотрели, кивнули, забыли. Поэтому есть сезонный турнир — добровольный и с чистого листа каждые три месяца. Он не про переработки: в таблице видно и регулярность, и стрик, а сравниваться можно внутри своей специальности."
+msgstr "Personal statistics get boring fast: you look at the chart, nod, forget. That is why there is a seasonal tournament — voluntary and starting from scratch every three months. It is not about overtime: the table shows consistency and streaks, and you can compare within your own specialty."
+
+#: templates/partials/footer.html
+msgid "Личный кабинет"
+msgstr "Dashboard"
+
+#: apps/accounts/forms.py
+msgid "Минимум 8 символов. Не используйте пароль от почты."
+msgstr "At least 8 characters. Don't reuse your email password."
+
+#: templates/pages/about.html
+msgid "Минута на регистрацию, ещё минута на подключение."
+msgstr "A minute to sign up, another to connect."
+
+#: templates/pages/pricing.html
+msgid "Можно ли вернуть деньги?"
+msgstr "Can I get a refund?"
+
+#: templates/pages/faq.html
+msgid "Можно ли пользоваться MyWay без WakaTime?"
+msgstr "Can I use MyWay without WakaTime?"
+
+#: templates/pages/landing.html
+msgid "Можно не участвовать в турнире?"
+msgstr "Can I skip the tournament?"
+
+#: templates/pages/features.html
+msgid "Можно спросить"
+msgstr "You can ask"
+
+#: templates/pages/faq.html
+msgid "Можно удалить аккаунт?"
+msgstr "Can I delete my account?"
+
+#: templates/accounts/register_done.html
+msgid "Мы завели профиль на <strong>%(email)s</strong>. Осталось три коротких шага — они займут пару минут."
+msgstr "We created a profile for <strong>%(email)s</strong>. Three short steps remain — a couple of minutes in total."
+
+#: templates/partials/cookie_notice.html
+msgid "Мы используем только технические cookie — они нужны, чтобы запомнить язык и тему. Аналитику и рекламные трекеры не подключаем."
+msgstr "We use essential cookies only — they remember your language and theme. No analytics and no advertising trackers."
+
+#: templates/pages/features.html
+msgid "Мы не видим ваш код"
+msgstr "We do not see your code"
+
+#: templates/pages/about.html
+msgid "Мы не пишем своего агента и не просим ставить ещё одну программу. Источник — WakaTime, который уже стоит у большинства и уже считает время. MyWay получает от него агрегаты и превращает их в графики. Код, имена файлов и содержимое проектов к нам не попадают."
+msgstr "We don't write our own agent and don't ask you to install another program. The source is WakaTime, which most people already have and which already counts time. MyWay receives aggregates from it and turns them into charts. Code, file names and project contents never reach us."
+
+#: templates/pages/pricing.html
+msgid "Мы не прячем графики за подпиской: считать своё время должно быть бесплатно. Платить есть смысл, когда хочется не просто цифр, а объяснения."
+msgstr "We don't hide charts behind a subscription: counting your own time should be free. Paying makes sense when you want an explanation, not just numbers."
+
+#: templates/pages/landing.html
+msgid "Мы предложим набор тегов по вашей специальности. Лишнее снимите, своё добавьте — хоть время в играх, оно будет считаться отдельно."
+msgstr "We suggest a set of tags for your specialty. Remove what you don't need, add your own — even gaming time, which is counted separately."
+
+#: templates/pages/about.html
+msgid "Мы хотели третий вариант: данные собираются сами, принадлежат человеку, а не компании, и показываются так, чтобы из них можно было что-то понять. Отсюда три решения, на которых держится сервис."
+msgstr "We wanted a third option: data that collects itself, belongs to the person rather than the company, and is presented so that something can actually be understood from it. Hence the three decisions the service rests on."
+
+#: templates/errors/404.html
+msgid "На главную"
+msgstr "Go home"
+
+#: apps/core/models.py
+msgid "Наименование"
+msgstr "Company name"
+
+#: templates/accounts/register_closed.html
+#: templates/pages/about.html
+#: templates/pages/landing.html
+msgid "Написать нам"
+msgstr "Contact us"
+
+#: templates/accounts/register_done.html
+#: templates/pages/contacts.html
+msgid "Напишите нам"
+msgstr "Get in touch"
+
+#: templates/pages/contacts.html
+msgid "Напишите нам: вопрос по сервису, проблема с оплатой, сотрудничество или юридический запрос."
+msgstr "Write to us: a question about the service, a payment problem, a partnership or a legal request."
+
+#: templates/pages/faq.html
+msgid "Напишите — ответим и дополним эту страницу."
+msgstr "Write to us — we will answer and expand this page."
+
+#: templates/pages/faq.html
+msgid "Насколько безопасно отдавать вам API-ключ WakaTime?"
+msgstr "How safe is it to give you my WakaTime API key?"
+
+#: apps/core/models.py
+msgid "Настройки сайта"
+msgstr "Site settings"
+
+#: templates/pages/landing.html
+#: templates/pages/pricing.html
+#: templates/partials/header.html
+msgid "Начать бесплатно"
+msgstr "Start free"
+
+#: templates/pages/pricing.html
+msgid "Начать с Free и перейти позже"
+msgstr "Start on Free, upgrade later"
+
+#: templates/pages/landing.html
+msgid "Начните считать своё время"
+msgstr "Start counting your time"
+
+#: templates/accounts/register.html
+#: templates/pages/contacts.html
+msgid "Не заполняйте это поле"
+msgstr "Do not fill in this field"
+
+#: templates/pages/faq.html
+msgid "Не нашли ответ?"
+msgstr "Didn't find your answer?"
+
+#: templates/pages/faq.html
+msgid "Не победит ли тот, кто просто дольше сидит?"
+msgstr "Won't whoever sits longest simply win?"
+
+#: apps/accounts/services/registration.py
+msgid "Некорректное значение."
+msgstr "Invalid value."
+
+#: templates/pages/landing.html
+msgid "Непонятно, какая технология съедает время, а какая только кажется тяжёлой"
+msgstr "No idea which technology actually eats time and which only feels heavy"
+
+#: templates/pages/pricing.html
+msgid "Нет. Бесплатный тариф не требует ни карты, ни платёжных данных вообще."
+msgstr "No. The free plan requires no card and no payment details at all."
+
+#: templates/pages/faq.html
+msgid "Нет. Из WakaTime приходят только агрегаты: количество минут, язык, название проекта. Содержимое файлов и их имена в MyWay не передаются и нигде не хранятся."
+msgstr "No. WakaTime sends aggregates only: minute counts, language, project name. File contents and names are never sent to MyWay and are stored nowhere."
+
+#: templates/pages/landing.html
+msgid "Нет. Мы получаем только агрегаты: сколько минут, на каком языке, в каком проекте. Содержимое файлов и их имена в MyWay не передаются и нигде не хранятся."
+msgstr "No. We receive aggregates only: how many minutes, in which language, in which project. File contents and names are never sent to MyWay and are stored nowhere."
+
+#: templates/pages/faq.html
+msgid "Нет. Турнир — отдельная внутренняя интеграция, она включается и выключается тумблером. Личная аналитика от этого не зависит и работает в любом случае."
+msgstr "No. The tournament is a separate built-in integration with its own switch. Personal analytics do not depend on it and work either way."
+
+#: templates/pages/landing.html
+msgid "Нужен только API-ключ из личного кабинета WakaTime. Плагин у вас, скорее всего, уже стоит — он есть почти для всех редакторов."
+msgstr "All you need is the API key from your WakaTime account. You probably already have the plugin — it exists for almost every editor."
+
+#: templates/pages/pricing.html
+msgid "Нужно ли привязывать карту для Free?"
+msgstr "Do I need a card for Free?"
+
+#: templates/pages/about.html
+#: templates/partials/footer.html
+#: templates/partials/header.html
+msgid "О проекте"
+msgstr "About"
+
+#: templates/pages/landing.html
+msgid "О чём спрашивают чаще всего"
+msgstr "What people ask most"
+
+#: templates/pages/about.html
+msgid "ОГРНИП"
+msgstr "OGRNIP"
+
+#: apps/core/models.py
+msgid "ОГРНИП / ОГРН"
+msgstr "Registration number (OGRN)"
+
+#: templates/pages/pricing.html
+msgid "Об оплате"
+msgstr "About payment"
+
+#: apps/core/models.py
+msgid "Обновлено"
+msgstr "Updated"
+
+#: apps/legal/models.py
+msgid "Обновлён"
+msgstr "Updated"
+
+#: templates/legal/document.html
+msgid "Обновлён %(date)s"
+msgstr "Updated %(date)s"
+
+#: apps/contacts/models.py
+msgid "Обработано"
+msgstr "Handled"
+
+#: apps/contacts/admin.py
+msgid "Обработано обращений: %(count)s"
+msgstr "Messages handled: %(count)s"
+
+#: apps/contacts/models.py
+msgid "Обращение"
+msgstr "Message"
+
+#: templates/pages/contacts.html
+msgid "Обращение отправлено. Ответим на указанную почту."
+msgstr "Your message has been sent. We will reply to the address you gave."
+
+#: apps/contacts/models.py
+msgid "Обращения"
+msgstr "Messages"
+
+#: templates/pages/features.html
+msgid "Общее время говорит мало. Важно, как оно распределено — по дням, языкам, проектам и часам суток."
+msgstr "Total time says little. What matters is how it is distributed — across days, languages, projects and hours."
+
+#: templates/pages/landing.html
+msgid "Общение с коллегами"
+msgstr "Talking to peers"
+
+#: apps/contacts/models.py
+msgid "Общий вопрос"
+msgstr "General question"
+
+#: templates/pages/about.html
+msgid "Объяснение важнее цифры"
+msgstr "Explanation beats the number"
+
+#: templates/pages/faq.html
+msgid "Обязательно ли участвовать?"
+msgstr "Is participation mandatory?"
+
+#: templates/pages/features.html
+msgid "Один тумблер — и вас нет в публичной таблице. Статистика сезона при этом сохранится."
+msgstr "One switch and you are gone from the public table. Your season stats are kept."
+
+#: apps/legal/models.py
+msgid "Одна строка для списка документов."
+msgstr "A single line for the document list."
+
+#: apps/contacts/forms.py
+msgid "Опишите вопрос — чем подробнее, тем быстрее ответим"
+msgstr "Describe the question — the more detail, the faster the answer"
+
+#: apps/contacts/models.py
+msgid "Оплата и подписка"
+msgstr "Billing and subscription"
+
+#: apps/core/models.py
+msgid "Определяет, какой набор юридических документов показывать. Смена перестраивает раздел «Документы» целиком."
+msgstr "Determines which set of legal documents is shown. Changing it rebuilds the Legal section entirely."
+
+#: apps/legal/models.py
+msgid "Опубликован"
+msgstr "Published"
+
+#: templates/pages/landing.html
+msgid "Осень"
+msgstr "Autumn"
+
+#: templates/partials/header.html
+msgid "Основная навигация"
+msgstr "Main navigation"
+
+#: templates/partials/header.html
+msgid "Открыть меню"
+msgstr "Open menu"
+
+#: apps/contacts/admin.py
+msgid "Отметить как обработанные"
+msgstr "Mark as handled"
+
+#: apps/contacts/models.py
+msgid "Отпечаток адреса"
+msgstr "Address fingerprint"
+
+#: templates/pages/contacts.html
+msgid "Отправить"
+msgstr "Send"
+
+#: templates/pages/contacts.html
+msgid "Отправляя форму, вы соглашаетесь на обработку указанных данных в соответствии с <a class=\"link\" href=\"%(privacy_url)s\">политикой конфиденциальности</a>."
+msgstr "By submitting the form you consent to the processing of the data provided in line with our <a class=\"link\" href=\"%(privacy_url)s\">privacy policy</a>."
+
+#: templates/pages/landing.html
+msgid "Оценка загрузки на глаз — и разговор с заказчиком о сроках на том же уровне"
+msgstr "Workload estimated by feel — and deadline conversations at the same level of precision"
+
+#: apps/accounts/forms.py
+msgid "Пароль"
+msgstr "Password"
+
+#: apps/accounts/forms.py
+msgid "Пароль не должен совпадать с email."
+msgstr "The password must not match your email."
+
+#: apps/accounts/forms.py
+msgid "Пароль не должен совпадать с username."
+msgstr "The password must not match your username."
+
+#: templates/pages/landing.html
+msgid "Первые графики появятся через пару минут: мы подтянем историю за последние 90 дней, а дальше данные обновляются сами."
+msgstr "The first charts appear within minutes: we pull the last 90 days of history, and after that the data updates itself."
+
+#: templates/accounts/register_done.html
+msgid "Перейти в личный кабинет"
+msgstr "Go to the dashboard"
+
+#: templates/base.html
+msgid "Перейти к содержимому"
+msgstr "Skip to content"
+
+#: templates/partials/theme_toggle.html
+msgid "Переключить тему"
+msgstr "Toggle theme"
+
+#: templates/pages/landing.html
+#: templates/pages/pricing.html
+msgid "Переписка с участниками"
+msgstr "Messaging with members"
+
+#: templates/pages/landing.html
+msgid "Переписка с участниками турнира. Тихий режим и чёрный список — на случай, если общение оказалось лишним."
+msgstr "Messaging with tournament members. Quiet mode and a block list, in case the conversation turns out to be unwanted."
+
+#: templates/accounts/register_done.html
+msgid "Письмо не пришло или что-то пошло не так?"
+msgstr "Email didn't arrive or something went wrong?"
+
+#: templates/pages/faq.html
+msgid "По умолчанию — только вы. В публичной таблице турнира видны username, специальность и часы за сезон, и то лишь если вы согласились участвовать. Профиль можно закрыть целиком, а город скрыть отдельно."
+msgstr "By default only you. The public tournament table shows username, specialty and seasonal hours, and only if you opted in. You can hide the profile entirely and the city separately."
+
+#: templates/pages/landing.html
+msgid "Подключите WakaTime"
+msgstr "Connect WakaTime"
+
+#: templates/accounts/register_done.html
+msgid "Подключите WakaTime — и первые графики появятся уже сегодня."
+msgstr "Connect WakaTime — and the first charts will appear today."
+
+#: templates/pages/faq.html
+msgid "Подписка"
+msgstr "Subscription"
+
+#: templates/partials/cookie_notice.html
+msgid "Подробнее"
+msgstr "Read more"
+
+#: templates/pages/landing.html
+msgid "Подробнее о возможностях"
+msgstr "More about features"
+
+#: templates/accounts/register_done.html
+msgid "Подтвердите почту по письму, которое придёт на указанный адрес."
+msgstr "Confirm your email using the message we send to that address."
+
+#: apps/core/models.py
+msgid "Пока выключено, счётчик не подключается и cookie не ставятся."
+msgstr "While off, no counter is loaded and no cookies are set."
+
+#: templates/pages/pricing.html
+msgid "Пока нет отдельного командного тарифа, но если вам нужно несколько аккаунтов — <a class=\"link\" href=\"%(contacts_url)s\">напишите</a>, договоримся."
+msgstr "There is no team plan yet, but if you need several accounts — <a class=\"link\" href=\"%(contacts_url)s\">write to us</a> and we will work something out."
+
+#: apps/legal/admin.py
+msgid "Показывается только та юрисдикция, что выбрана в настройках сайта. Один документ = одна пара «юрисдикция + язык»."
+msgstr "Only the jurisdiction selected in site settings is shown. One document = one jurisdiction + language pair."
+
+#: apps/legal/models.py
+msgid "Показывать в подвале"
+msgstr "Show in footer"
+
+#: apps/legal/models.py
+msgid "Политика в отношении cookie"
+msgstr "Cookie Policy"
+
+#: apps/legal/models.py
+msgid "Политика возврата средств"
+msgstr "Refund Policy"
+
+#: apps/legal/models.py
+msgid "Политика конфиденциальности"
+msgstr "Privacy Policy"
+
+#: templates/pages/features.html
+msgid "Получаем только агрегаты: минуты, язык, название проекта"
+msgstr "We receive aggregates only: minutes, language, project name"
+
+#: apps/contacts/models.py
+msgid "Получено"
+msgstr "Received"
+
+#: apps/legal/models.py
+msgid "Пользовательское соглашение"
+msgstr "Terms of Service"
+
+#: templates/legal/index.html
+msgid "Пользовательское соглашение, политика конфиденциальности, оферта и другие документы MyWay."
+msgstr "Terms of service, privacy policy, the public offer and other MyWay documents."
+
+#: templates/partials/cookie_notice.html
+msgid "Понятно"
+msgstr "Got it"
+
+#: templates/pages/about.html
+msgid "Попробуйте на своих данных"
+msgstr "Try it on your own data"
+
+#: apps/legal/models.py
+msgid "Порядок"
+msgstr "Order"
+
+#: templates/pages/landing.html
+msgid "Посмотреть тарифы"
+msgstr "See pricing"
+
+#: templates/pages/features.html
+msgid "Посмотрите на своих данных"
+msgstr "See it on your own data"
+
+#: apps/accounts/forms.py
+msgid "Похоже, в адресе опечатка."
+msgstr "That address looks like a typo."
+
+#: templates/pages/contacts.html
+msgid "Почта"
+msgstr "Email"
+
+#: templates/legal/index.html
+msgid "Правовая информация"
+msgstr "Legal information"
+
+#: templates/pages/features.html
+msgid "Приватность"
+msgstr "Privacy"
+
+#: templates/partials/preview.html
+msgid "Пример дашборда MyWay: карточки со сводкой, график активности по дням и список языков"
+msgstr "Example of the MyWay dashboard: summary cards, a daily activity chart and a list of languages"
+
+#: templates/pages/pricing.html
+msgid "Приоритетный ответ поддержки"
+msgstr "Priority support"
+
+#: apps/contacts/models.py
+msgid "Проблема с сервисом"
+msgstr "Service problem"
+
+#: apps/accounts/services/registration.py
+msgid "Проверьте правильность заполнения полей."
+msgstr "Please check the fields."
+
+#: templates/pages/landing.html
+msgid "Прогресс за год не виден: кажется, что стоишь на месте"
+msgstr "A year of progress is invisible: it feels like standing still"
+
+#: templates/partials/footer.html
+msgid "Продукт"
+msgstr "Product"
+
+#: templates/pages/landing.html
+msgid "Продуктивные часы неизвестны, поэтому созвоны попадают ровно на них"
+msgstr "Your productive hours are unknown, so meetings land exactly on them"
+
+#: templates/pages/about.html
+msgid "Проект молодой и развивается открыто. Работает интеграция с WakaTime, аналитика, турнир и переписка. В ближайших планах — интеграции с GitHub, GitLab, Figma, Jira и Toggl, чтобы учитывать и то, что не видит редактор кода."
+msgstr "The project is young and develops in the open. The WakaTime integration, analytics, the tournament and messaging all work. Next up are integrations with GitHub, GitLab, Figma, Jira and Toggl, to capture what the code editor cannot see."
+
+#: templates/pages/contacts.html
+msgid "Проект небольшой, поэтому письмо читает тот, кто пишет код. Опишите вопрос подробно — так ответим точнее и быстрее."
+msgstr "The project is small, so the person writing the code reads your email. Describe the question in detail — we will answer faster and more precisely."
+
+#: templates/pages/pricing.html
+msgid "Простые автоматические наблюдения"
+msgstr "Simple automatic observations"
+
+#: templates/pages/landing.html
+msgid "Профиль можно закрыть, город скрыть, из таблицы выйти. Названия файлов и содержимое кода мы не собираем в принципе."
+msgstr "You can make the profile private, hide your city, leave the table. We never collect file names or code contents."
+
+#: templates/pages/features.html
+msgid "Профиль можно закрыть, город скрыть, переписку ограничить"
+msgstr "You can hide your profile, your city and limit who may message you"
+
+#: apps/legal/admin.py
+msgid "Публикация"
+msgstr "Publication"
+
+#: apps/legal/models.py
+msgid "Публичная оферта"
+msgstr "Public Offer"
+
+#: templates/pages/features.html
+msgid "Пять срезов вместо одной цифры"
+msgstr "Five views instead of one number"
+
+#: apps/core/admin.py
+#: templates/accounts/register.html
+#: templates/partials/footer.html
+msgid "Регистрация"
+msgstr "Sign up"
+
+#: templates/pages/landing.html
+msgid "Регистрация занимает минуту, подключение WakaTime — ещё одну. Первые графики появятся сегодня же."
+msgstr "Signing up takes a minute, connecting WakaTime another one. The first charts appear the same day."
+
+#: apps/core/models.py
+msgid "Регистрация открыта"
+msgstr "Registration open"
+
+#: apps/core/admin.py
+#: apps/legal/models.py
+#: templates/pages/about.html
+msgid "Реквизиты"
+msgstr "Company details"
+
+#: apps/core/models.py
+msgid "Россия"
+msgstr "Russia"
+
+#: templates/pages/landing.html
+msgid "С MyWay"
+msgstr "With MyWay"
+
+#: apps/core/models.py
+msgid "США"
+msgstr "United States"
+
+#: apps/core/apps.py
+msgid "Сайт"
+msgstr "Site"
+
+#: templates/pages/features.html
+msgid "Сводка за период"
+msgstr "Period summary"
+
+#: templates/pages/landing.html
+msgid "Сезон длится одно время года. В конце счётчики обнуляются, а результат уходит в историю — так у новых участников есть шанс, а у старых остаётся, чем гордиться. После четвёртого сезона подводим итог года."
+msgstr "A season lasts one time of year. At the end the counters reset and the result goes into history — newcomers get a chance, veterans keep something to be proud of. After the fourth season we settle the year."
+
+#: templates/pages/features.html
+msgid "Сезонный лидерборд"
+msgstr "Seasonal leaderboard"
+
+#: templates/pages/landing.html
+msgid "Сезонный турнир"
+msgstr "Seasonal tournament"
+
+#: templates/pages/landing.html
+msgid "Сезонный турнир превращает рутину в понятную цель"
+msgstr "The seasonal tournament turns routine into a concrete goal"
+
+#: templates/pages/features.html
+msgid "Сейчас WakaTime, дальше больше"
+msgstr "WakaTime now, more to come"
+
+#: templates/pages/landing.html
+msgid "Сейчас WakaTime. В планах GitHub, GitLab, Figma, Jira и Toggl — чтобы учитывать и то, что не видит редактор."
+msgstr "WakaTime today. GitHub, GitLab, Figma, Jira and Toggl are planned — to capture what the editor cannot see."
+
+#: templates/pages/faq.html
+msgid "Сейчас нет: WakaTime — единственный источник данных. Мы принципиально не собираем статистику сами, чтобы не ставить вам ещё один агент на машину. Другие интеграции появятся позже."
+msgstr "Not yet: WakaTime is the only data source. We deliberately don't collect statistics ourselves so you don't have to install another agent. Other integrations will come later."
+
+#: apps/accounts/services/registration.py
+msgid "Сервис регистрации временно недоступен. Попробуйте позже или напишите нам."
+msgstr "The registration service is temporarily unavailable. Try later or write to us."
+
+#: apps/accounts/services/registration.py
+msgid "Сервис регистрации не ответил вовремя. Попробуйте ещё раз через минуту."
+msgstr "The registration service did not respond in time. Try again in a minute."
+
+#: templates/pages/features.html
+msgid "Сколько времени, насколько это больше или меньше обычного, какой язык вышел вперёд, сколько было переключений между проектами и когда был пик концентрации."
+msgstr "How much time, how far above or below your usual, which language came out on top, how often you switched projects and when focus peaked."
+
+#: apps/contacts/forms.py
+msgid "Слишком коротко: напишите хотя бы пару предложений, иначе нам нечего ответить."
+msgstr "Too short: write at least a couple of sentences, otherwise there is nothing to reply to."
+
+#: apps/contacts/views.py
+msgid "Слишком много обращений подряд. Попробуйте через несколько минут."
+msgstr "Too many messages in a row. Try again in a few minutes."
+
+#: apps/accounts/views.py
+msgid "Слишком много попыток за короткое время. Подождите несколько минут и попробуйте снова."
+msgstr "Too many attempts in a short time. Wait a few minutes and try again."
+
+#: apps/accounts/services/registration.py
+msgid "Слишком много попыток. Подождите немного и попробуйте снова."
+msgstr "Too many attempts. Wait a moment and try again."
+
+#: templates/pages/landing.html
+msgid "Смотрите аналитику"
+msgstr "Watch the analytics"
+
+#: apps/legal/models.py
+msgid "Согласие на обработку персональных данных"
+msgstr "Personal Data Processing Consent"
+
+#: templates/pages/contacts.html
+msgid "Соглашения, обработка данных и оферта — в разделе"
+msgstr "Agreements, data processing and the offer are in the"
+
+#: templates/pages/features.html
+msgid "Содержимое файлов и их имена не передаются и не хранятся"
+msgstr "File contents and names are never transmitted or stored"
+
+#: templates/accounts/register.html
+msgid "Создайте аккаунт"
+msgstr "Create an account"
+
+#: templates/accounts/register.html
+msgid "Создайте аккаунт MyWay: подключите WakaTime и начните видеть, куда уходит ваше рабочее время."
+msgstr "Create a MyWay account: connect WakaTime and start seeing where your working time goes."
+
+#: apps/legal/models.py
+msgid "Создан"
+msgstr "Created"
+
+#: templates/accounts/register.html
+#: templates/pages/about.html
+#: templates/pages/features.html
+#: templates/pages/landing.html
+msgid "Создать аккаунт"
+msgstr "Create account"
+
+#: apps/contacts/models.py
+msgid "Сообщение"
+msgstr "Message text"
+
+#: templates/errors/404.html
+msgid "Сообщить о проблеме"
+msgstr "Report a problem"
+
+#: templates/pages/landing.html
+msgid "Сообщить, когда откроем"
+msgstr "Tell me when you open"
+
+#: templates/pages/features.html
+msgid "Соревнование включается по желанию. Оно не про «кто дольше сидит», а про регулярность: стрик и стабильность видны в таблице так же, как часы."
+msgstr "The competition is opt-in. It is not about who sits longest but about consistency: streaks and steadiness are as visible in the table as hours are."
+
+#: templates/pages/about.html
+msgid "Соревнование вместо отчётности"
+msgstr "Competition instead of reporting"
+
+#: apps/contacts/models.py
+msgid "Сотрудничество"
+msgstr "Partnership"
+
+#: templates/legal/document.html
+msgid "Список документов"
+msgstr "Document list"
+
+#: templates/pages/features.html
+msgid "Сравнивайте себя с бэкендерами, дизайнерами или земляками — фильтры по специальности, языку и стране."
+msgstr "Compare yourself with backend developers, designers or people from your country — filters by specialty, language and country."
+
+#: templates/pages/features.html
+msgid "Сравнить тарифы"
+msgstr "Compare plans"
+
+#: templates/pages/faq.html
+msgid "Сразу после подключения мы подтягиваем историю за последние 90 дней — это занимает секунды. Дальше данные обновляются автоматически несколько раз в день."
+msgstr "Right after connecting we pull the last 90 days of history — that takes seconds. After that data refreshes automatically several times a day."
+
+#: templates/partials/preview.html
+msgid "Среднее в день"
+msgstr "Daily average"
+
+#: templates/errors/404.html
+msgid "Страница не найдена"
+msgstr "Page not found"
+
+#: templates/partials/preview.html
+msgid "Стрик"
+msgstr "Streak"
+
+#: templates/pages/landing.html
+msgid "Считайте не задачи, а часы в коде"
+msgstr "Count hours in code, not tickets"
+
+#: templates/base.html
+msgid "Считайте не задачи, а часы в коде. Графики, сезонный турнир и ежедневный разбор от AI-агента."
+msgstr "Count hours in code, not tickets. Charts, a seasonal tournament and a daily review from an AI agent."
+
+#: templates/pages/landing.html
+msgid "Счётчик турнира обнуляется, а результат сохраняется в истории. Личная аналитика не сбрасывается никогда — вы всегда видите любой период."
+msgstr "The tournament counter resets and the result is saved in history. Personal analytics never reset — you can always look at any period."
+
+#: templates/pages/landing.html
+msgid "Таблица участников с фильтрами по специальности, языку и стране. Участие добровольное и выключается в один клик."
+msgstr "A members table with filters by specialty, language and country. Taking part is optional and switches off in one click."
+
+#: apps/accounts/services/registration.py
+msgid "Такой email уже зарегистрирован."
+msgstr "That email is already registered."
+
+#: apps/accounts/services/registration.py
+msgid "Такой пользователь уже существует."
+msgstr "That user already exists."
+
+#: templates/errors/404.html
+msgid "Такой страницы нет"
+msgstr "There is no such page"
+
+#: templates/pages/landing.html
+#: templates/pages/pricing.html
+#: templates/partials/footer.html
+#: templates/partials/header.html
+msgid "Тарифы"
+msgstr "Pricing"
+
+#: templates/pages/landing.html
+msgid "Таск-трекер показывает закрытые задачи, а не потраченное время. Ощущения врут: день, который казался пустым, часто оказывается самым продуктивным."
+msgstr "An issue tracker shows closed tickets, not the time they took. Gut feeling lies: the day that felt empty is often the most productive one."
+
+#: templates/pages/faq.html
+msgid "Тег — это язык, инструмент или своя категория, время по которой вы хотите видеть. Мы предложим набор по вашей специальности, а вы уберёте лишнее и добавите своё. Можно отслеживать и то, что к работе не относится — например, время в играх: оно считается отдельно и в турнир не идёт."
+msgstr "A tag is a language, a tool or your own category whose time you want to see. We suggest a set for your specialty; you remove what you don't need and add your own. You can also track things unrelated to work — gaming time, for example: it is counted separately and never enters the tournament."
+
+#: apps/legal/admin.py
+#: apps/legal/models.py
+msgid "Текст"
+msgstr "Body"
+
+#: apps/core/models.py
+msgid "Текст при закрытой регистрации"
+msgstr "Message when registration is closed"
+
+#: apps/contacts/models.py
+msgid "Тема"
+msgstr "Topic"
+
+#: templates/pages/landing.html
+msgid "Тепловая карта показывает ваши реальные пики продуктивности"
+msgstr "A heatmap shows your real productivity peaks"
+
+#: templates/pages/pricing.html
+msgid "Тепловая карта продуктивных часов"
+msgstr "Heatmap of productive hours"
+
+#: templates/pages/features.html
+msgid "Тепловая карта часов"
+msgstr "Hourly heatmap"
+
+#: apps/accounts/forms.py
+msgid "Только латиница, цифры, точка, дефис и подчёркивание. Начинаться и заканчиваться должен буквой или цифрой."
+msgstr "Latin letters, digits, dot, hyphen and underscore only. It must start and end with a letter or digit."
+
+#: templates/pages/landing.html
+msgid "Точные часы по дням, языкам и проектам — данные собираются сами"
+msgstr "Exact hours by day, language and project — collected automatically"
+
+#: templates/accounts/register.html
+msgid "Три поля — и всё. Специальность и подтверждение почты попросим уже внутри, когда осмотритесь."
+msgstr "Three fields and that's it. We'll ask for your specialty and email confirmation inside, once you've looked around."
+
+#: templates/pages/landing.html
+msgid "Три шага и минута времени"
+msgstr "Three steps and one minute"
+
+#: apps/core/admin.py
+msgid "Тумблер «Регистрация открыта» мгновенно закрывает приём новых пользователей — деплой не нужен."
+msgstr "The \"Registration open\" switch closes sign-ups instantly — no deploy needed."
+
+#: templates/pages/faq.html
+#: templates/pages/features.html
+#: templates/pages/landing.html
+msgid "Турнир"
+msgstr "Tournament"
+
+#: templates/accounts/register_closed.html
+msgid "У меня уже есть аккаунт"
+msgstr "I already have an account"
+
+#: templates/partials/cookie_notice.html
+msgid "Уведомление о файлах cookie"
+msgstr "Cookie notice"
+
+#: templates/pages/pricing.html
+msgid "Углублённая аналитика и сравнение периодов"
+msgstr "Deeper analytics and period comparison"
+
+#: templates/pages/landing.html
+msgid "Углублённая аналитика и сравнения"
+msgstr "Deeper analytics and comparisons"
+
+#: templates/accounts/register.html
+msgid "Уже есть аккаунт?"
+msgstr "Already have an account?"
+
+#: templates/pages/pricing.html
+msgid "Участие в сезонном турнире"
+msgstr "Seasonal tournament participation"
+
+#: templates/pages/landing.html
+msgid "Участие в турнире"
+msgstr "Tournament participation"
+
+#: templates/pages/faq.html
+msgid "Участие в турнире отключится автоматически: считать часы станет нечем. Уже собранные данные и история сезонов сохранятся."
+msgstr "Tournament participation switches off automatically: there would be nothing left to count hours from. Data already collected and season history are kept."
+
+#: templates/pages/features.html
+msgid "Фильтры по своим"
+msgstr "Filters for your peers"
+
+#: templates/pages/faq.html
+msgid "Часы — не единственная колонка: в таблице видны стрик и изменение позиции за неделю. Регулярность заметна не меньше объёма. И сравнивать себя можно внутри своей специальности, а не со всеми подряд."
+msgstr "Hours are not the only column: the table shows streaks and weekly position changes. Consistency is as visible as volume. And you can compare within your own specialty rather than against everyone."
+
+#: templates/pages/features.html
+msgid "Четыре сезона в году"
+msgstr "Four seasons a year"
+
+#: templates/pages/pricing.html
+msgid "Что будет с данными, если отменить Pro?"
+msgstr "What happens to my data if I cancel Pro?"
+
+#: templates/pages/features.html
+msgid "Что в отчёте"
+msgstr "What's in the report"
+
+#: templates/pages/landing.html
+msgid "Что внутри"
+msgstr "What's inside"
+
+#: templates/pages/landing.html
+msgid "Что входит в Free"
+msgstr "What Free includes"
+
+#: templates/pages/landing.html
+msgid "Что входит в Pro"
+msgstr "What Pro includes"
+
+#: templates/pages/features.html
+msgid "Что вы получаете"
+msgstr "What you get"
+
+#: templates/pages/faq.html
+msgid "Что даёт Pro?"
+msgstr "What does Pro give me?"
+
+#: templates/pages/faq.html
+msgid "Что если я отключу WakaTime?"
+msgstr "What if I disconnect WakaTime?"
+
+#: templates/pages/landing.html
+msgid "Что происходит с моей статистикой в конце сезона?"
+msgstr "What happens to my stats at the end of a season?"
+
+#: templates/pages/landing.html
+msgid "Что такое WakaTime и обязательно ли его подключать?"
+msgstr "What is WakaTime and do I have to connect it?"
+
+#: templates/pages/faq.html
+msgid "Что такое WakaTime, видим ли мы код, как устроены сезоны турнира, можно ли скрыться из лидерборда и что происходит при отмене подписки."
+msgstr "What WakaTime is, whether we see your code, how tournament seasons work, whether you can hide from the leaderboard and what happens when you cancel."
+
+#: templates/pages/faq.html
+msgid "Что такое WakaTime?"
+msgstr "What is WakaTime?"
+
+#: templates/pages/faq.html
+msgid "Что такое теги и зачем их выбирать?"
+msgstr "What are tags and why choose them?"
+
+#: templates/pages/features.html
+msgid "Что умеет MyWay: графики активности, тепловая карта продуктивных часов, сезонный турнир, переписка с участниками и ежедневный разбор от AI-агента."
+msgstr "What MyWay does: activity charts, a heatmap of productive hours, a seasonal tournament, member messaging and a daily review from an AI agent."
+
+#: templates/pages/landing.html
+#: templates/pages/pricing.html
+msgid "Экспорт статистики"
+msgstr "Stats export"
+
+#: apps/accounts/forms.py
+msgid "Это имя зарезервировано, выберите другое."
+msgstr "That name is reserved, please pick another."
+
+#: templates/pages/faq.html
+msgid "Это плагин для редактора кода, который автоматически засекает время работы: в каком файле, на каком языке, в каком проекте. Плагины есть для VS Code, всех IDE JetBrains, Vim, Neovim, Sublime, Xcode и десятков других редакторов. Базовый тариф WakaTime бесплатный."
+msgstr "It is a code editor plugin that automatically records your working time: which file, which language, which project. Plugins exist for VS Code, all JetBrains IDEs, Vim, Neovim, Sublime, Xcode and dozens of other editors. WakaTime's base plan is free."
+
+#: apps/accounts/services/registration.py
+msgid "Этот username уже занят."
+msgstr "That username is already taken."
+
+#: templates/pages/contacts.html
+msgid "Юридические вопросы"
+msgstr "Legal questions"
+
+#: apps/core/admin.py
+#: apps/legal/models.py
+msgid "Юридические документы"
+msgstr "Legal documents"
+
+#: apps/contacts/models.py
+msgid "Юридический вопрос"
+msgstr "Legal question"
+
+#: apps/legal/models.py
+msgid "Юридический документ"
+msgstr "Legal document"
+
+#: apps/legal/models.py
+msgid "Юрисдикция"
+msgstr "Jurisdiction"
+
+#: apps/core/models.py
+msgid "Юрисдикция документов"
+msgstr "Document jurisdiction"
+
+#: templates/accounts/register.html
+msgid "Я принимаю <a class=\"link\" href=\"%(terms_url)s\" target=\"_blank\" rel=\"noopener\">пользовательское соглашение</a> и согласен с <a class=\"link\" href=\"%(privacy_url)s\" target=\"_blank\" rel=\"noopener\">политикой конфиденциальности</a>."
+msgstr "I accept the <a class=\"link\" href=\"%(terms_url)s\" target=\"_blank\" rel=\"noopener\">terms of service</a> and agree to the <a class=\"link\" href=\"%(privacy_url)s\" target=\"_blank\" rel=\"noopener\">privacy policy</a>."
+
+#: apps/accounts/forms.py
+msgid "Я принимаю условия"
+msgstr "I accept the terms"
+
+#: apps/legal/models.py
+msgid "Язык"
+msgstr "Language"
+
+#: templates/partials/lang_switch.html
+msgid "Язык интерфейса"
+msgstr "Interface language"
+
+#: apps/contacts/models.py
+msgid "Язык обращения"
+msgstr "Message language"
+
+#: templates/pages/features.html
+msgid "Языки и проекты"
+msgstr "Languages and projects"
+
+#: templates/pages/landing.html
+msgid "базовый тариф"
+msgstr "base plan"
+
+#: templates/pages/landing.html
+#: templates/pages/pricing.html
+msgid "в месяц"
+msgstr "per month"
+
+#: templates/pages/features.html
+msgid "ваши реальные пики: под них удобно двигать созвоны"
+msgstr "your real peaks: handy for moving meetings out of them"
+
+#: templates/pages/features.html
+msgid "видно провалы и авралы, а не усреднённая ровная линия"
+msgstr "dips and crunches are visible, not an averaged flat line"
+
+#: templates/pages/features.html
+msgid "всего, среднее в день, лучший день и текущий стрик, каждая цифра с изменением к прошлому периоду"
+msgstr "total, daily average, best day and current streak, each with its change against the previous period"
+
+#: templates/pages/contacts.html
+msgid "документы"
+msgstr "legal section"
+
+#: templates/pages/landing.html
+#: templates/pages/pricing.html
+msgid "или 4 900 ₽ в год — два месяца в подарок"
+msgstr "or 4,900 ₽ a year — two months free"
+
+#: templates/pages/features.html
+msgid "куда на самом деле уходит время и какая технология вас тормозит"
+msgstr "where time actually goes and which technology slows you down"
+
+#: templates/pages/landing.html
+msgid "минута"
+msgstr "minute"
+
+#: templates/pages/landing.html
+msgid "на подключение"
+msgstr "to connect"
+
+#: templates/pages/landing.html
+#: templates/pages/pricing.html
+msgid "навсегда"
+msgstr "forever"
+
+#: templates/pages/landing.html
+msgid "сезона в году"
+msgstr "seasons a year"
+
+#: templates/pages/features.html
+msgid "скоро"
+msgstr "soon"
+
+#: apps/accounts/forms.py
+#: apps/contacts/models.py
+msgctxt "подпись поля формы"
+msgid "Email"
+msgstr "Email"
+
+#: apps/accounts/forms.py
+msgctxt "подпись поля формы"
+msgid "Username"
+msgstr "Username"
+

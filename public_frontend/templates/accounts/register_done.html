@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% translate "Аккаунт создан" %} — MyWay{% endblock %}
+
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static 'css/landing.css' %}" />
+  <meta name="robots" content="noindex, nofollow" />
+{% endblock %}
+
+{% block content %}
+  <section class="section">
+    <div class="container">
+      <div class="result">
+        <span class="result__icon">
+          <svg width="28" height="28" aria-hidden="true"><use href="#i-check" /></svg>
+        </span>
+
+        <h1 class="result__title">{% translate "Аккаунт создан" %}</h1>
+
+        <p class="lead result__lead">
+          {% blocktranslate %}Мы завели профиль на <strong>{{ email }}</strong>. Осталось три коротких шага — они займут пару минут.{% endblocktranslate %}
+        </p>
+
+        <div class="next-steps">
+          <div class="next-step">
+            <span class="next-step__num">1</span>
+            <span>{% translate "Войдите в личный кабинет и укажите специальность — по ней мы подберём теги для отслеживания." %}</span>
+          </div>
+          <div class="next-step">
+            <span class="next-step__num">2</span>
+            <span>{% translate "Подтвердите почту по письму, которое придёт на указанный адрес." %}</span>
+          </div>
+          <div class="next-step">
+            <span class="next-step__num">3</span>
+            <span>{% translate "Подключите WakaTime — и первые графики появятся уже сегодня." %}</span>
+          </div>
+        </div>
+
+        <a class="btn btn--primary btn--lg" href="{{ login_url }}">
+          {% translate "Перейти в личный кабинет" %}
+          <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow-right" /></svg>
+        </a>
+
+        <p class="muted" style="margin-top: var(--space-6); font-size: 14px">
+          {% translate "Письмо не пришло или что-то пошло не так?" %}
+          <a class="link" href="{% url 'contacts:contacts' %}">{% translate "Напишите нам" %}</a>
+        </p>
+      </div>
+    </div>
+  </section>
+{% endblock %}

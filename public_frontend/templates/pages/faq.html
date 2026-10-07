@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% translate "Вопросы и ответы" %} — MyWay{% endblock %}
+{% block description %}{% translate "Что такое WakaTime, видим ли мы код, как устроены сезоны турнира, можно ли скрыться из лидерборда и что происходит при отмене подписки." %}{% endblock %}
+
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static 'css/landing.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">{% translate "Вопросы" %}</span>
+        <h1>{% translate "Вопросы и ответы" %}</h1>
+        <p class="lead" style="margin-top: var(--space-4)">
+          {% blocktranslate %}Если ответа здесь нет — напишите, мы добавим его на эту страницу.{% endblocktranslate %}
+        </p>
+      </div>
+
+      <h2 style="margin-bottom: var(--space-5); font-size: 21px">{% translate "Как это работает" %}</h2>
+      <div class="faq" data-faq style="margin-bottom: 48px">
+        <details class="faq__item">
+          <summary class="faq__question">{% translate "Что такое WakaTime?" %}</summary>
+          <div class="faq__answer">
+            {% blocktranslate %}Это плагин для редактора кода, который автоматически засекает время работы: в каком файле, на каком языке, в каком проекте. Плагины есть для VS Code, всех IDE JetBrains, Vim, Neovim, Sublime, Xcode и десятков других редакторов. Базовый тариф WakaTime бесплатный.{% endblocktranslate %}
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">{% translate "Можно ли пользоваться MyWay без WakaTime?" %}</summary>
+          <div class="faq__answer">
+            {% blocktranslate %}Сейчас нет: WakaTime — единственный источник данных. Мы принципиально не собираем статистику сами, чтобы не ставить вам ещё один агент на машину. Другие интеграции появятся позже.{% endblocktranslate %}
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">{% translate "Как быстро появятся первые графики?" %}</summary>
+          <div class="faq__answer">
+            {% blocktranslate %}Сразу после подключения мы подтягиваем историю за последние 90 дней — это занимает секунды. Дальше данные обновляются автоматически несколько раз в день.{% endblocktranslate %}
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">{% translate "Что такое теги и зачем их выбирать?" %}</summary>
+          <div class="faq__answer">
+            {% blocktranslate %}Тег — это язык, инструмент или своя категория, время по которой вы хотите видеть. Мы предложим набор по вашей специальности, а вы уберёте лишнее и добавите своё. Можно отслеживать и то, что к работе не относится — например, время в играх: оно считается отдельно и в турнир не идёт.{% endblocktranslate %}
+          </div>
+        </details>
+      </div>
+
+      <h2 style="margin-bottom: var(--space-5); font-size: 21px">{% translate "Данные и приватность" %}</h2>
+      <div class="faq" data-faq style="margin-bottom: 48px">
+        <details class="faq__item">
+          <summary class="faq__question">{% translate "Вы видите мой код?" %}</summary>
+          <div class="faq__answer">
+            {% blocktranslate %}Нет. Из WakaTime приходят только агрегаты: количество минут, язык, название проекта. Содержимое файлов и их имена в MyWay не передаются и нигде не хранятся.{% endblocktranslate %}
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">{% translate "Насколько безопасно отдавать вам API-ключ WakaTime?" %}</summary>
+          <div class="faq__answer">
+            {% blocktranslate %}Ключ хранится в зашифрованном виде и используется только для чтения статистики. Отозвать его можно в любой момент в настройках WakaTime — тогда мы просто перестанем получать данные. В интерфейсе ключ показывается замаскированным.{% endblocktranslate %}
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">{% translate "Кто видит мою статистику?" %}</summary>
+          <div class="faq__answer">
+            {% blocktranslate %}По умолчанию — только вы. В публичной таблице турнира видны username, специальность и часы за сезон, и то лишь если вы согласились участвовать. Профиль можно закрыть целиком, а город скрыть отдельно.{% endblocktranslate %}
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">{% translate "Можно удалить аккаунт?" %}</summary>
+          <div class="faq__answer">
+            {% blocktranslate %}Да, в настройках личного кабинета. Удаляются профиль, вся статистика и переписки. Действие необратимо, поэтому мы просим подтвердить его вводом username.{% endblocktranslate %}
+          </div>
+        </details>
+      </div>
+
+      <h2 style="margin-bottom: var(--space-5); font-size: 21px">{% translate "Турнир" %}</h2>
+      <div class="faq" data-faq style="margin-bottom: 48px">
+        <details class="faq__item">
+          <summary class="faq__question">{% translate "Обязательно ли участвовать?" %}</summary>
+          <div class="faq__answer">
+            {% blocktranslate %}Нет. Турнир — отдельная внутренняя интеграция, она включается и выключается тумблером. Личная аналитика от этого не зависит и работает в любом случае.{% endblocktranslate %}
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">{% translate "Как устроены сезоны?" %}</summary>
+          <div class="faq__answer">
+            {% blocktranslate %}Год делится на четыре сезона по временам года: зима с 1 декабря по конец февраля, весна с 1 марта, лето с 1 июня, осень с 1 сентября по 30 ноября. В конце сезона счётчик обнуляется, результат уходит в историю. Итоги года подводятся 1 декабря по четырём завершившимся сезонам.{% endblocktranslate %}
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">{% translate "Не победит ли тот, кто просто дольше сидит?" %}</summary>
+          <div class="faq__answer">
+            {% blocktranslate %}Часы — не единственная колонка: в таблице видны стрик и изменение позиции за неделю. Регулярность заметна не меньше объёма. И сравнивать себя можно внутри своей специальности, а не со всеми подряд.{% endblocktranslate %}
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">{% translate "Что если я отключу WakaTime?" %}</summary>
+          <div class="faq__answer">
+            {% blocktranslate %}Участие в турнире отключится автоматически: считать часы станет нечем. Уже собранные данные и история сезонов сохранятся.{% endblocktranslate %}
+          </div>
+        </details>
+      </div>
+
+      <h2 style="margin-bottom: var(--space-5); font-size: 21px">{% translate "Подписка" %}</h2>
+      <div class="faq" data-faq>
+        <details class="faq__item">
+          <summary class="faq__question">{% translate "Что даёт Pro?" %}</summary>
+          <div class="faq__answer">
+            {% url 'pages:pricing' as pricing_url %}
+            {% blocktranslate %}Ежедневный разбор статистики от AI-агента, возможность задавать ему вопросы, углублённую аналитику и экспорт. Подробное сравнение — на <a class="link" href="{{ pricing_url }}">странице тарифов</a>.{% endblocktranslate %}
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">{% translate "Как оплатить?" %}</summary>
+          <div class="faq__answer">
+            {% blocktranslate %}Внутри личного кабинета, российскими картами или через СБП. Подписка продлевается автоматически, автопродление отключается в один клик.{% endblocktranslate %}
+          </div>
+        </details>
+      </div>
+
+      <div class="cta" style="margin-top: 56px">
+        <h2 class="cta__title">{% translate "Не нашли ответ?" %}</h2>
+        <p class="lead cta__lead">{% translate "Напишите — ответим и дополним эту страницу." %}</p>
+        <div class="cta__actions">
+          <a class="btn btn--primary btn--lg" href="{% url 'contacts:contacts' %}">{% translate "Задать вопрос" %}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

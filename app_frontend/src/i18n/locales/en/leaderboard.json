@@ -1,0 +1,45 @@
+{
+  "page": {
+    "title": "Leaderboard",
+    "subtitle": "The seasonal MyWay tournament"
+  },
+  "season": {
+    "selector": "Season",
+    "progress": "Season is {{percent}} through",
+    "annualNote": "Annual results cover the four seasons that ended this year. We settle them on 1 December.",
+    "archived": "Archived season — results are final"
+  },
+  "filters": {
+    "search": "Search by username",
+    "specialty": "Specialty",
+    "specialtyAll": "All specialties",
+    "language": "Language or tag",
+    "languageAll": "Any language",
+    "country": "Country",
+    "countryAll": "All countries",
+    "reset": "Reset filters",
+    "found": "Found: {{count}}"
+  },
+  "columns": {
+    "rank": "#",
+    "user": "Member",
+    "specialty": "Specialty",
+    "hours": "Hours this season",
+    "topLanguage": "Top language",
+    "streak": "Streak",
+    "delta": "Δ this week"
+  },
+  "notParticipating": {
+    "title": "You are not in the table",
+    "text": "WakaTime is connected, but you are not competing. Turn participation on and you will join the seasonal standings from the next sync.",
+    "cta": "Join the tournament",
+    "noWakatime": "Connect WakaTime first to appear in the table"
+  },
+  "you": "You",
+  "empty": {
+    "title": "Nobody matches these filters",
+    "description": "Try dropping some conditions — for example, keep only the specialty."
+  },
+  "streakValue_one": "{{count}} day",
+  "streakValue_other": "{{count}} days"
+}

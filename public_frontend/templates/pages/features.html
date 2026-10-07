@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% translate "Возможности" %} — MyWay{% endblock %}
+{% block description %}{% translate "Что умеет MyWay: графики активности, тепловая карта продуктивных часов, сезонный турнир, переписка с участниками и ежедневный разбор от AI-агента." %}{% endblock %}
+
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static 'css/landing.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">{% translate "Возможности" %}</span>
+        <h1>{% translate "Что вы получаете" %}</h1>
+        <p class="lead" style="margin-top: var(--space-4)">
+          {% blocktranslate %}MyWay не пытается заменить таск-трекер и не просит ничего заполнять руками. Он берёт уже собранные данные и отвечает на вопросы, которые обычно остаются без ответа.{% endblocktranslate %}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {# ── Аналитика ──────────────────────────────────────────────────── #}
+  <section class="section section--alt section--tight">
+    <div class="container">
+      <div class="hero__grid">
+        <div>
+          <span class="eyebrow">{% translate "Аналитика" %}</span>
+          <h2>{% translate "Пять срезов вместо одной цифры" %}</h2>
+          <p class="lead" style="margin: var(--space-4) 0 var(--space-6)">
+            {% blocktranslate %}Общее время говорит мало. Важно, как оно распределено — по дням, языкам, проектам и часам суток.{% endblocktranslate %}
+          </p>
+
+          <ul class="checklist checklist--positive">
+            <li>
+              <svg class="checklist__mark" width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>
+              <span><strong>{% translate "Сводка за период" %}</strong> — {% translate "всего, среднее в день, лучший день и текущий стрик, каждая цифра с изменением к прошлому периоду" %}</span>
+            </li>
+            <li>
+              <svg class="checklist__mark" width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>
+              <span><strong>{% translate "Активность по дням" %}</strong> — {% translate "видно провалы и авралы, а не усреднённая ровная линия" %}</span>
+            </li>
+            <li>
+              <svg class="checklist__mark" width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>
+              <span><strong>{% translate "Языки и проекты" %}</strong> — {% translate "куда на самом деле уходит время и какая технология вас тормозит" %}</span>
+            </li>
+            <li>
+              <svg class="checklist__mark" width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>
+              <span><strong>{% translate "Тепловая карта часов" %}</strong> — {% translate "ваши реальные пики: под них удобно двигать созвоны" %}</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>{% include "partials/preview.html" %}</div>
+      </div>
+    </div>
+  </section>
+
+  {# ── Турнир ─────────────────────────────────────────────────────── #}
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">{% translate "Турнир" %}</span>
+        <h2>{% translate "Сезонный лидерборд" %}</h2>
+        <p class="lead" style="margin-top: var(--space-4)">
+          {% blocktranslate %}Соревнование включается по желанию. Оно не про «кто дольше сидит», а про регулярность: стрик и стабильность видны в таблице так же, как часы.{% endblocktranslate %}
+        </p>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card">
+          <h3 class="card__title">{% translate "Фильтры по своим" %}</h3>
+          <p class="card__text">
+            {% blocktranslate %}Сравнивайте себя с бэкендерами, дизайнерами или земляками — фильтры по специальности, языку и стране.{% endblocktranslate %}
+          </p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">{% translate "Четыре сезона в году" %}</h3>
+          <p class="card__text">
+            {% blocktranslate %}Каждый сезон — чистый лист. Прошлые результаты сохраняются, в декабре подводится годовой итог.{% endblocktranslate %}
+          </p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">{% translate "Выйти можно в любой момент" %}</h3>
+          <p class="card__text">
+            {% blocktranslate %}Один тумблер — и вас нет в публичной таблице. Статистика сезона при этом сохранится.{% endblocktranslate %}
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  {# ── AI-агент ───────────────────────────────────────────────────── #}
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">Pro</span>
+        <h2>{% translate "AI-агент, который читает ваши цифры" %}</h2>
+        <p class="lead" style="margin-top: var(--space-4)">
+          {% blocktranslate %}Графики показывают что произошло. Агент объясняет почему и что с этим делать. Отчёт приходит каждое утро в раздел «Сообщения» — как обычное письмо от коллеги.{% endblocktranslate %}
+        </p>
+      </div>
+
+      <div class="grid grid--2" style="max-width: 860px">
+        <article class="card">
+          <span class="card__icon"><svg width="19" height="19" aria-hidden="true"><use href="#i-sparkle" /></svg></span>
+          <h3 class="card__title">{% translate "Что в отчёте" %}</h3>
+          <p class="card__text">
+            {% blocktranslate %}Сколько времени, насколько это больше или меньше обычного, какой язык вышел вперёд, сколько было переключений между проектами и когда был пик концентрации.{% endblocktranslate %}
+          </p>
+        </article>
+        <article class="card">
+          <span class="card__icon"><svg width="19" height="19" aria-hidden="true"><use href="#i-message" /></svg></span>
+          <h3 class="card__title">{% translate "Можно спросить" %}</h3>
+          <p class="card__text">
+            {% blocktranslate %}Агент отвечает на вопросы по вашей статистике прямо в чате: когда вы работали лучше всего в этом сезоне, что изменилось после смены проекта.{% endblocktranslate %}
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  {# ── Интеграции и приватность ───────────────────────────────────── #}
+  <section class="section">
+    <div class="container">
+      <div class="grid grid--2">
+        <div>
+          <span class="eyebrow">{% translate "Интеграции" %}</span>
+          <h2 style="margin-bottom: var(--space-4)">{% translate "Сейчас WakaTime, дальше больше" %}</h2>
+          <p class="lead" style="margin-bottom: var(--space-5)">
+            {% blocktranslate %}WakaTime закрывает время в редакторе. Остальное — в работе.{% endblocktranslate %}
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: var(--space-2)">
+            <span class="badge badge--success">WakaTime</span>
+            <span class="badge badge--neutral">GitHub · {% translate "скоро" %}</span>
+            <span class="badge badge--neutral">GitLab · {% translate "скоро" %}</span>
+            <span class="badge badge--neutral">Figma · {% translate "скоро" %}</span>
+            <span class="badge badge--neutral">Jira · {% translate "скоро" %}</span>
+            <span class="badge badge--neutral">Toggl · {% translate "скоро" %}</span>
+          </div>
+        </div>
+
+        <div>
+          <span class="eyebrow">{% translate "Приватность" %}</span>
+          <h2 style="margin-bottom: var(--space-4)">{% translate "Мы не видим ваш код" %}</h2>
+          <ul class="checklist checklist--positive">
+            <li>
+              <svg class="checklist__mark" width="15" height="15" aria-hidden="true"><use href="#i-shield" /></svg>
+              {% translate "Получаем только агрегаты: минуты, язык, название проекта" %}
+            </li>
+            <li>
+              <svg class="checklist__mark" width="15" height="15" aria-hidden="true"><use href="#i-shield" /></svg>
+              {% translate "Содержимое файлов и их имена не передаются и не хранятся" %}
+            </li>
+            <li>
+              <svg class="checklist__mark" width="15" height="15" aria-hidden="true"><use href="#i-shield" /></svg>
+              {% translate "Профиль можно закрыть, город скрыть, переписку ограничить" %}
+            </li>
+            <li>
+              <svg class="checklist__mark" width="15" height="15" aria-hidden="true"><use href="#i-shield" /></svg>
+              {% translate "API-ключ WakaTime хранится в зашифрованном виде и используется только для чтения" %}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="cta">
+        <h2 class="cta__title">{% translate "Посмотрите на своих данных" %}</h2>
+        <p class="lead cta__lead">
+          {% blocktranslate %}Бесплатный тариф отдаёт всю аналитику и участие в турнире. Ограничения только у AI-агента.{% endblocktranslate %}
+        </p>
+        <div class="cta__actions">
+          {% if site_settings.registration_open %}
+            <a class="btn btn--primary btn--lg" href="{% url 'accounts:register' %}">{% translate "Создать аккаунт" %}</a>
+          {% endif %}
+          <a class="btn btn--secondary btn--lg" href="{% url 'pages:pricing' %}">{% translate "Сравнить тарифы" %}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,141 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.labelRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.optional {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.aside {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.hint {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-xs);
+  color: var(--danger-text);
+}
+
+/* — Общий вид полей ввода — */
+.control {
+  width: 100%;
+  background: var(--bg-inset);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  padding: 0 var(--space-3);
+  height: 36px;
+  font-size: var(--text-base);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.control::placeholder {
+  color: var(--text-muted);
+}
+
+.control:hover:not(:disabled):not(:focus) {
+  border-color: var(--border-strong);
+}
+
+.control:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-ring);
+}
+
+.control:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.invalid {
+  border-color: var(--danger);
+}
+
+.invalid:focus {
+  border-color: var(--danger);
+  box-shadow: 0 0 0 3px var(--danger-subtle);
+}
+
+.textarea {
+  height: auto;
+  min-height: 88px;
+  padding: var(--space-3);
+  resize: vertical;
+  line-height: var(--leading-normal);
+  font-family: inherit;
+}
+
+.select {
+  appearance: none;
+  padding-right: var(--space-8);
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) 15px,
+    calc(100% - 13px) 15px;
+  background-size:
+    5px 5px,
+    5px 5px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/* Поле с кнопкой внутри (пароль, поиск). */
+.withAdornment {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.withAdornment .control {
+  padding-right: 38px;
+}
+
+.adornment {
+  position: absolute;
+  right: var(--space-1);
+  display: flex;
+  align-items: center;
+}
+
+.leadingIcon {
+  position: absolute;
+  left: var(--space-3);
+  display: flex;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.withLeading .control {
+  padding-left: 34px;
+}

@@ -1,0 +1,36 @@
+{
+  "joined": "On MyWay since {{date}}",
+  "localTime": "Local time {{time}}",
+  "lastSeen": "Last seen {{time}}",
+  "description": "About",
+  "languages": "Languages & tools",
+  "languagesEmpty": "No data yet — this member has not connected an integration",
+  "activity": "Activity over 30 days",
+  "tournament": {
+    "title": "Tournament",
+    "rank": "Season rank",
+    "hours": "Hours this season",
+    "bestSeason": "Best season",
+    "notParticipating": "Not competing"
+  },
+  "actions": {
+    "write": "Message",
+    "edit": "Edit profile",
+    "block": "Block",
+    "unblock": "Unblock",
+    "report": "Report",
+    "reported": "Report sent. We will take a look shortly"
+  },
+  "blocked": {
+    "badge": "Blocked",
+    "notice": "You blocked this member: they cannot message you and their messages are hidden."
+  },
+  "notFound": {
+    "title": "Member not found",
+    "description": "The username may have changed, or the profile was deleted."
+  },
+  "private": {
+    "title": "Profile is hidden",
+    "description": "This member has made their profile private in privacy settings."
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "page": {
+    "title": "Integrations",
+    "subtitle": "Where your data comes from and what MyWay does with it"
+  },
+  "sections": {
+    "connected": "Connected",
+    "available": "Available",
+    "soon": "Coming soon"
+  },
+  "status": {
+    "connected": "Connected",
+    "disconnected": "Not connected",
+    "error": "Sync error",
+    "lastSync": "Synced {{time}}",
+    "neverSynced": "Never synced"
+  },
+  "wakatime": {
+    "name": "WakaTime",
+    "description": "Your primary data source: editor time, languages, projects and active hours.",
+    "connect": "Connect WakaTime",
+    "configure": "Configure tags",
+    "keyLabel": "API key",
+    "keyPlaceholder": "waka_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "keyHint": "The key is stored encrypted and used only to read your stats",
+    "whereToGet": "Where to find the key",
+    "keyRequired": "Paste your API key",
+    "keyInvalid": "The key must start with waka_ and be longer than 20 characters",
+    "connectTitle": "Connect WakaTime",
+    "connectSubtitle": "All you need is the API key from your WakaTime account. Takes half a minute.",
+    "syncing": "Fetching your stats",
+    "syncingHint": "Usually 10–20 seconds. We pull the last 90 days.",
+    "connected": "WakaTime connected",
+    "disconnectTitle": "Disconnect WakaTime?",
+    "disconnectText": "We will stop pulling your stats. Data already collected is kept, but the dashboard goes empty.",
+    "disconnectCascade": "Tournament participation turns off too: the leaderboard counts hours from WakaTime data.",
+    "disconnected": "WakaTime disconnected",
+    "currentKey": "Current key"
+  },
+  "leaderboard": {
+    "name": "Leaderboard",
+    "internal": "Built-in integration",
+    "description": "The seasonal tournament. Your hours and username become visible in the public table.",
+    "toggle": "Compete in the tournament",
+    "requiresWakatime": "Connect WakaTime first — the tournament counts hours from its data",
+    "leaveTitle": "Leave the tournament?",
+    "leaveText": "You will disappear from the public table. This season's stats are kept: come back before it ends and your place is restored.",
+    "joined": "You are in the tournament",
+    "left": "You left the tournament"
+  },
+  "aiAgent": {
+    "name": "AI agent",
+    "description": "Every morning it posts a breakdown of yesterday in Messages: where you dropped, where you grew and why.",
+    "enabled": "Active",
+    "requiresPro": "Available on the Pro plan"
+  },
+  "soon": {
+    "github": "GitHub",
+    "githubDescription": "Commits, reviews and repository activity",
+    "gitlab": "GitLab",
+    "gitlabDescription": "The same for self-hosted and gitlab.com",
+    "figma": "Figma",
+    "figmaDescription": "Time in files and edit counts — for designers",
+    "jira": "Jira",
+    "jiraDescription": "Ties your hours to issues and sprints",
+    "toggl": "Toggl",
+    "togglDescription": "Manual tracking for what the editor cannot see",
+    "badge": "Soon",
+    "notify": "Notify me",
+    "notified": "We will let you know when {{name}} is ready"
+  },
+  "tags": {
+    "title": "What are we tracking?",
+    "subtitlePreset": "We preselected tags for your specialty — {{specialty}}. Remove what you don't need or add your own.",
+    "subtitleEdit": "Only checked tags count towards your stats and the tournament.",
+    "groups": {
+      "language": "Languages",
+      "tool": "Tools & frameworks",
+      "offtopic": "Outside your specialty"
+    },
+    "offtopicHint": "Add anything here: gaming, studying, pet projects. These are tracked separately and never counted in the tournament.",
+    "searchPlaceholder": "Find or add a tag",
+    "addCustom": "Add \"{{value}}\"",
+    "nothingFound": "Nothing found. You can add it as your own tag.",
+    "selected": "Selected: {{count}}",
+    "tournamentQuestion": "Join the tournament?",
+    "tournamentYes": "Yes, count me in",
+    "tournamentYesHint": "Your username, specialty and seasonal hours become visible in the public table. You can leave at any time.",
+    "tournamentNo": "Not now",
+    "tournamentNoHint": "Your stats stay private. You can join later from this same section.",
+    "saved": "Tracking settings saved",
+    "emptyWarning": "Pick at least one tag, otherwise your stats will be empty"
+  }
+}

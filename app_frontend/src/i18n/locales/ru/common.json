@@ -1,0 +1,159 @@
+{
+  "app": {
+    "name": "MyWay",
+    "tagline": "Твой путь в цифрах"
+  },
+  "nav": {
+    "dashboard": "Дашборд",
+    "integrations": "Интеграции",
+    "leaderboard": "Лидерборд",
+    "messages": "Сообщения",
+    "settings": "Настройки",
+    "profile": "Мой профиль",
+    "logout": "Выйти"
+  },
+  "actions": {
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "close": "Закрыть",
+    "confirm": "Подтвердить",
+    "continue": "Продолжить",
+    "back": "Назад",
+    "next": "Далее",
+    "done": "Готово",
+    "skip": "Пропустить",
+    "later": "Позже",
+    "retry": "Повторить",
+    "edit": "Редактировать",
+    "delete": "Удалить",
+    "remove": "Убрать",
+    "add": "Добавить",
+    "search": "Поиск",
+    "filter": "Фильтры",
+    "reset": "Сбросить",
+    "showMore": "Показать ещё",
+    "copy": "Скопировать",
+    "refresh": "Обновить",
+    "connect": "Подключить",
+    "disconnect": "Отключить",
+    "enable": "Включить",
+    "disable": "Отключить",
+    "upgrade": "Подключить Pro",
+    "write": "Написать",
+    "block": "Заблокировать",
+    "unblock": "Разблокировать",
+    "report": "Пожаловаться",
+    "signIn": "Войти",
+    "openMenu": "Открыть меню"
+  },
+  "states": {
+    "loading": "Загружаем…",
+    "empty": "Пока пусто",
+    "error": "Что-то пошло не так",
+    "errorHint": "Попробуйте обновить страницу",
+    "notFound": "Страница не найдена",
+    "notFoundHint": "Возможно, ссылка устарела или адрес введён с опечаткой",
+    "goHome": "На дашборд",
+    "saved": "Изменения сохранены",
+    "saveFailed": "Не удалось сохранить",
+    "unsavedChanges": "Есть несохранённые изменения"
+  },
+  "duration": {
+    "zero": "0 м",
+    "zeroLong": "нет активности",
+    "hoursShort": "{{count}} ч",
+    "minutesShort": "{{count}} м",
+    "hoursMinutesShort": "{{hours}} ч {{minutes}} м",
+    "hoursLong_one": "{{count}} час",
+    "hoursLong_few": "{{count}} часа",
+    "hoursLong_many": "{{count}} часов",
+    "minutesLong_one": "{{count}} минута",
+    "minutesLong_few": "{{count}} минуты",
+    "minutesLong_many": "{{count}} минут"
+  },
+  "units": {
+    "days_one": "{{count}} день",
+    "days_few": "{{count}} дня",
+    "days_many": "{{count}} дней",
+    "hours_one": "{{count}} час",
+    "hours_few": "{{count}} часа",
+    "hours_many": "{{count}} часов",
+    "people_one": "{{count}} участник",
+    "people_few": "{{count}} участника",
+    "people_many": "{{count}} участников",
+    "tags_one": "{{count}} тег",
+    "tags_few": "{{count}} тега",
+    "tags_many": "{{count}} тегов"
+  },
+  "specialty": {
+    "label": "Специальность",
+    "placeholder": "Выберите специальность",
+    "backend": "Backend-разработчик",
+    "frontend": "Frontend-разработчик",
+    "fullstack": "Fullstack-разработчик",
+    "mobile": "Мобильный разработчик",
+    "devops": "DevOps-инженер",
+    "data": "Data / ML-инженер",
+    "qa": "QA-инженер",
+    "design": "Дизайнер",
+    "other": "Другое",
+    "groups": {
+      "development": "Разработка",
+      "infrastructure": "Инфраструктура и данные",
+      "other": "Прочее"
+    }
+  },
+  "seasons": {
+    "winter": "Зима",
+    "spring": "Весна",
+    "summer": "Лето",
+    "autumn": "Осень",
+    "current": "Текущий сезон",
+    "annual": "Итоги {{year}} года",
+    "range": "{{start}} — {{end}}",
+    "daysLeft": "до конца сезона {{days}}",
+    "finished": "Сезон завершён",
+    "winterLabel": "Зима {{prev}}/{{year}}"
+  },
+  "plan": {
+    "free": "Free",
+    "pro": "Pro",
+    "proBadge": "Pro",
+    "proOnly": "Только на Pro",
+    "proPitch": "Ежедневный разбор статистики от AI-агента и расширенная аналитика."
+  },
+  "theme": {
+    "label": "Тема",
+    "system": "Системная",
+    "dark": "Тёмная",
+    "light": "Светлая",
+    "toggle": "Переключить тему"
+  },
+  "language": {
+    "label": "Язык",
+    "ru": "Русский",
+    "en": "English",
+    "switch": "Сменить язык"
+  },
+  "demo": {
+    "title": "Демо-режим",
+    "persona": "Сценарий",
+    "new": "Новый пользователь",
+    "newHint": "Без специальности и интеграций — покажет весь онбординг",
+    "free": "Free-пользователь",
+    "freeHint": "WakaTime подключён, участвует в турнире",
+    "pro": "Pro-пользователь",
+    "proHint": "Активная подписка и работающий AI-агент",
+    "reset": "Сбросить демо",
+    "resetDone": "Демо-состояние сброшено",
+    "hide": "Скрыть панель",
+    "show": "Демо"
+  },
+  "a11y": {
+    "mainNavigation": "Основная навигация",
+    "userMenu": "Меню пользователя",
+    "closeDialog": "Закрыть диалог",
+    "sortBy": "Сортировать по «{{column}}»",
+    "notifications": "Уведомления"
+  }
+}

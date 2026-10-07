@@ -1,0 +1,66 @@
+{
+  "title": "Messages",
+  "search": "Search conversations",
+  "tabs": {
+    "all": "All",
+    "unread": "Unread",
+    "support": "Support"
+  },
+  "system": {
+    "ai": "MyWay AI agent",
+    "support": "MyWay Support",
+    "supportBadge": "Official",
+    "supportSla": "We usually reply within 4 hours"
+  },
+  "empty": {
+    "title": "Pick a conversation",
+    "description": "Your threads are on the left. To message someone new, open their page from the leaderboard.",
+    "noConversations": "No conversations yet",
+    "noConversationsHint": "Find someone on the leaderboard and say hello first",
+    "openLeaderboard": "Open leaderboard",
+    "noResults": "Nothing found"
+  },
+  "thread": {
+    "lastSeen": "last seen {{time}}",
+    "online": "online",
+    "placeholder": "Write a message…",
+    "send": "Send",
+    "sendHint": "Enter to send, Shift+Enter for a new line",
+    "openProfile": "Open profile",
+    "sent": "Message sent"
+  },
+  "menu": {
+    "mute": "Quiet mode",
+    "muteOn": "Quiet mode on",
+    "muteOff": "Quiet mode off",
+    "muteHint": "No badge and no sound",
+    "block": "Block",
+    "unblock": "Unblock",
+    "clear": "Clear conversation",
+    "cleared": "Conversation cleared",
+    "report": "Report",
+    "reported": "Report sent"
+  },
+  "blocked": {
+    "badge": "Blocked",
+    "notice": "You blocked this user",
+    "unblock": "Unblock",
+    "modalTitle": "Block {{username}}?",
+    "modalText": "They will not be able to message you and their messages disappear from your list. You can unblock them in privacy settings."
+  },
+  "ai": {
+    "report": "Report for {{period}}",
+    "total": "Total",
+    "focus": "Focus",
+    "topLanguage": "Top language",
+    "lockedTitle": "This report is a Pro feature",
+    "lockedText": "Every morning the agent breaks down the previous day and tells you what changed and why.",
+    "lockedCta": "Get Pro",
+    "inputLocked": "Asking the agent questions requires Pro",
+    "greeting": "I review your stats every morning. Ask me anything about your numbers."
+  },
+  "draft": {
+    "newChat": "New conversation with {{username}}",
+    "hint": "No thread yet — send the first message"
+  }
+}

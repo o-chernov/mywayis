@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static i18n site_tags %}
+
+{% block title %}{{ document.title }} — MyWay{% endblock %}
+{% block description %}{{ document.summary|default:document.title }}{% endblock %}
+
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static 'css/landing.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <section class="section">
+    <div class="container">
+      <div class="doc-layout">
+        <nav class="doc-nav" aria-label="{% translate 'Список документов' %}">
+          <span class="footer__title">{% translate "Документы" %}</span>
+          {% for item in documents %}
+            <a
+              class="doc-nav__link {% if item.slug == document.slug %}doc-nav__link--active{% endif %}"
+              href="{% url 'legal:document' item.slug %}"
+              {% if item.slug == document.slug %}aria-current="page"{% endif %}
+            >
+              {{ item.title }}
+            </a>
+          {% endfor %}
+        </nav>
+
+        <article>
+          <h1 style="margin-bottom: var(--space-5)">{{ document.title }}</h1>
+
+          <div class="doc-meta">
+            <span>{% blocktranslate with version=document.version %}Версия {{ version }}{% endblocktranslate %}</span>
+            <span>{% blocktranslate with date=document.effective_date|date:"d.m.Y" %}Действует с {{ date }}{% endblocktranslate %}</span>
+            <span>{% blocktranslate with date=document.updated_at|date:"d.m.Y" %}Обновлён {{ date }}{% endblocktranslate %}</span>
+          </div>
+
+          <div class="prose">{{ body|markdown }}</div>
+
+          <div class="alert alert--info" style="margin-top: 40px">
+            <svg class="alert__icon" width="17" height="17" aria-hidden="true"><use href="#i-info" /></svg>
+            <span>
+              {% url 'contacts:contacts' as contacts_url %}
+              {% blocktranslate %}Вопросы по документу — через <a class="link" href="{{ contacts_url }}">форму обратной связи</a>, тема «Юридический вопрос».{% endblocktranslate %}
+            </span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+{% endblock %}

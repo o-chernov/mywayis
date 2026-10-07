@@ -1,0 +1,66 @@
+{% load static i18n site_tags %}<!doctype html>
+<html lang="{{ LANGUAGE_CODE }}" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+
+    <title>{% block title %}{% translate "MyWay — аналитика вашего времени в коде" %}{% endblock %}</title>
+    <meta name="description" content="{% block description %}{% translate "MyWay забирает данные из WakaTime и превращает их в понятные графики: сколько времени уходит в код, на какие языки и проекты, в какие часы вы продуктивнее. Плюс сезонный турнир с другими разработчиками." %}{% endblock %}" />
+
+    <link rel="canonical" href="{{ site_url }}{{ request.path }}" />
+    {% get_available_languages as available_languages %}
+    {% for code, name in available_languages %}
+      {% alt_lang_url code as alt_path %}
+      <link rel="alternate" hreflang="{{ code }}" href="{{ site_url }}{{ alt_path }}" />
+    {% endfor %}
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MyWay" />
+    <meta property="og:title" content="{% block og_title %}{% translate "MyWay — аналитика вашего времени в коде" %}{% endblock %}" />
+    <meta property="og:description" content="{% block og_description %}{% translate "Считайте не задачи, а часы в коде. Графики, сезонный турнир и ежедневный разбор от AI-агента." %}{% endblock %}" />
+    <meta property="og:url" content="{{ site_url }}{{ request.path }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="{% static 'img/favicon.svg' %}" type="image/svg+xml" />
+
+    <script>
+      // Тему ставим до первой отрисовки, иначе на тёмной теме мигает светлый фон.
+      (function () {
+        try {
+          var stored = localStorage.getItem('myway.theme');
+          var mode = stored ? JSON.parse(stored) : 'dark';
+          var resolved =
+            mode === 'system'
+              ? window.matchMedia('(prefers-color-scheme: light)').matches
+                ? 'light'
+                : 'dark'
+              : mode;
+          document.documentElement.setAttribute('data-theme', resolved);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+
+    <link rel="stylesheet" href="{% static 'css/tokens.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/site.css' %}" />
+    {% block extra_head %}{% endblock %}
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">{% translate "Перейти к содержимому" %}</a>
+
+    {% include "partials/header.html" %}
+
+    <main id="main">
+      {% block content %}{% endblock %}
+    </main>
+
+    {% include "partials/footer.html" %}
+    {% include "partials/cookie_notice.html" %}
+
+    <script src="{% static 'js/theme.js' %}" defer></script>
+    {% block extra_scripts %}{% endblock %}
+  </body>
+</html>

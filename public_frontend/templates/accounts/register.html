@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% translate "Регистрация" %} — MyWay{% endblock %}
+{% block description %}{% translate "Создайте аккаунт MyWay: подключите WakaTime и начните видеть, куда уходит ваше рабочее время." %}{% endblock %}
+
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static 'css/landing.css' %}" />
+  {# Страница регистрации не нужна в поиске — на неё ведут с лендинга. #}
+  <meta name="robots" content="noindex, follow" />
+{% endblock %}
+
+{% block content %}
+  <section class="section">
+    <div class="container narrow">
+      <div class="section__head section__head--center">
+        <span class="eyebrow">{% translate "Регистрация" %}</span>
+        <h1>{% translate "Создайте аккаунт" %}</h1>
+        <p class="lead" style="margin-top: var(--space-4)">
+          {% blocktranslate %}Три поля — и всё. Специальность и подтверждение почты попросим уже внутри, когда осмотритесь.{% endblocktranslate %}
+        </p>
+      </div>
+
+      {% if form_error %}
+        <div class="alert alert--error" role="alert" style="margin-bottom: var(--space-6)">
+          <svg class="alert__icon" width="17" height="17" aria-hidden="true"><use href="#i-alert" /></svg>
+          <span>{{ form_error }}</span>
+        </div>
+      {% endif %}
+
+      {% if form.non_field_errors %}
+        <div class="alert alert--error" role="alert" style="margin-bottom: var(--space-6)">
+          <svg class="alert__icon" width="17" height="17" aria-hidden="true"><use href="#i-alert" /></svg>
+          <span>{{ form.non_field_errors|join:" " }}</span>
+        </div>
+      {% endif %}
+
+      <form class="form" method="post" novalidate>
+        {% csrf_token %}
+
+        {# Honeypot и метка времени: человек их не видит, бот заполняет. #}
+        <div class="hp-field" aria-hidden="true">
+          <label for="{{ form.website.id_for_label }}">{% translate "Не заполняйте это поле" %}</label>
+          {{ form.website }}
+        </div>
+        {{ form.rendered_at }}
+
+        {% for field in form.visible_fields %}
+          {% if field.name != 'website' and field.name != 'agree' %}
+            <div class="field">
+              <label class="field__label" for="{{ field.id_for_label }}">
+                {{ field.label }}{% if field.field.required %}<span class="field__required" aria-hidden="true"> *</span>{% endif %}
+              </label>
+
+              {{ field }}
+
+              {% if field.errors %}
+                {% for error in field.errors %}
+                  <span class="field__error" role="alert">
+                    <svg width="13" height="13" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px"><use href="#i-alert" /></svg>
+                    {{ error }}
+                  </span>
+                {% endfor %}
+              {% elif field.help_text %}
+                <span class="field__hint">{{ field.help_text }}</span>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+
+        <div class="field">
+          <label class="checkbox">
+            {{ form.agree }}
+            <span>
+              {% url 'legal:document' 'terms' as terms_url %}
+              {% url 'legal:document' 'privacy' as privacy_url %}
+              {% blocktranslate %}Я принимаю <a class="link" href="{{ terms_url }}" target="_blank" rel="noopener">пользовательское соглашение</a> и согласен с <a class="link" href="{{ privacy_url }}" target="_blank" rel="noopener">политикой конфиденциальности</a>.{% endblocktranslate %}
+            </span>
+          </label>
+          {% for error in form.agree.errors %}
+            <span class="field__error" role="alert">
+              <svg width="13" height="13" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px"><use href="#i-alert" /></svg>
+              {{ error }}
+            </span>
+          {% endfor %}
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--lg btn--block">
+          {% translate "Создать аккаунт" %}
+        </button>
+
+        <p class="muted" style="text-align: center; font-size: 14px">
+          {% translate "Уже есть аккаунт?" %}
+          <a class="link" href="{{ app_url }}/login">{% translate "Войти" %}</a>
+        </p>
+      </form>
+    </div>
+  </section>
+{% endblock %}

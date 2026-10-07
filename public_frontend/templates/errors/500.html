@@ -1,0 +1,35 @@
+{% comment %}
+  Страница 500 рендерится, когда что-то уже сломалось, поэтому она НЕ
+  наследует base.html и не обращается к контекст-процессорам и базе:
+  падение внутри обработчика ошибки не должно превращаться в пустой ответ.
+{% endcomment %}
+{% load static %}<!doctype html>
+<html lang="ru" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Ошибка на сервере — MyWay</title>
+    <link rel="stylesheet" href="{% static 'css/tokens.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/site.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/landing.css' %}" />
+  </head>
+  <body>
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="result">
+            <h1 class="result__title">Что-то сломалось у нас</h1>
+            <p class="lead result__lead">
+              Ошибка на нашей стороне — мы уже видим её в логах. Попробуйте
+              обновить страницу через минуту.
+            </p>
+            <div class="cta__actions">
+              <a class="btn btn--primary btn--lg" href="/">На главную</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,406 @@
+.layout {
+  display: grid;
+  gap: var(--space-4);
+}
+
+/* — KPI — */
+.kpiRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.kpi {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-5);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  min-width: 0;
+}
+
+.kpiLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.kpiValue {
+  font-family: var(--font-mono);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.15;
+  /* «120 ч 48 м» не должно рваться на две строки — карточка узкая. */
+  white-space: nowrap;
+}
+
+/*
+ * Подпись переносится, а не обрезается: «к прошлому периоду» в обрубленном
+ * виде читается как опечатка. Карточки в ряду всё равно тянутся по самой
+ * высокой, так что перенос ничего не ломает.
+ */
+.kpiFooter {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.delta {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.deltaUp {
+  color: var(--success-text);
+}
+
+.deltaDown {
+  color: var(--danger-text);
+}
+
+.deltaFlat {
+  color: var(--text-muted);
+}
+
+/* — Сетка графиков — */
+.chartsRow {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: var(--space-4);
+}
+
+.bottomRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.sideRow {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.chartBox {
+  height: 240px;
+  width: 100%;
+}
+
+.chartBoxTall {
+  height: 268px;
+}
+
+/* — Легенда языков — */
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.legendRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-base);
+}
+
+.legendDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.legendName {
+  color: var(--text-secondary);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.legendValue {
+  margin-left: auto;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--text-sm);
+}
+
+.legendShare {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  min-width: 42px;
+  text-align: right;
+}
+
+/* — Проекты — */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.projectHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.projectName {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.projectValue {
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+/* — Тепловая карта — */
+.heatmap {
+  display: grid;
+  grid-template-columns: 28px repeat(24, 1fr);
+  gap: 3px;
+  align-items: center;
+}
+
+.heatLabel {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-align: right;
+  padding-right: var(--space-1);
+}
+
+.heatCell {
+  aspect-ratio: 1;
+  border-radius: 2px;
+  min-height: 12px;
+}
+
+.heatHours {
+  display: grid;
+  grid-template-columns: 28px repeat(24, 1fr);
+  gap: 3px;
+  margin-top: var(--space-2);
+}
+
+.heatHour {
+  font-size: 9px;
+  color: var(--text-muted);
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.heatScale {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.heatScaleCells {
+  display: flex;
+  gap: 3px;
+}
+
+.heatScaleCell {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+/* — Наблюдения — */
+.insights {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.insight {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+.insightBullet {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+
+.insight strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* — Pro-тизер — */
+.teaser {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 90% 10%, var(--accent-subtle), transparent 60%),
+    var(--bg-surface);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.teaserHead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.teaserTitle {
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.teaserText {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+/* Размытая заглушка «отчёта» под замком. */
+.teaserPreview {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--bg-inset);
+  filter: blur(3px);
+  user-select: none;
+  pointer-events: none;
+}
+
+.teaserLine {
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--border-default);
+}
+
+.teaserLock {
+  position: absolute;
+  inset: auto 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* — Виджет турнира — */
+.tournament {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.rankRow {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+}
+
+.rankValue {
+  font-family: var(--font-mono);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.rankOf {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.seasonRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.seasonLabel {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.seasonDays {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* — Тултип графиков — */
+.tooltip {
+  padding: var(--space-2) var(--space-3);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  font-size: var(--text-sm);
+}
+
+.tooltipLabel {
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.tooltipValue {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.skeletonGrid {
+  display: grid;
+  gap: var(--space-4);
+}

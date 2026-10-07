@@ -1,0 +1,28 @@
+{% load i18n site_tags %}
+{% get_available_languages as available_languages %}
+
+{% comment %}
+  Переключатель языка — форма на set_language: он сам ставит cookie и
+  запоминает выбор между сессиями. Ссылка через alt_lang_url нужна,
+  чтобы человек остался на той же странице, а не улетел на главную.
+{% endcomment %}
+<div class="lang">
+  <div class="lang__list" role="group" aria-label="{% translate 'Язык интерфейса' %}">
+    {% for code, name in available_languages %}
+      {% alt_lang_url code as alt_path %}
+      <form action="{% url 'set_language' %}" method="post" style="display: contents">
+        {% csrf_token %}
+        <input type="hidden" name="language" value="{{ code }}" />
+        <input type="hidden" name="next" value="{{ alt_path }}" />
+        <button
+          type="submit"
+          class="lang__item {% if code == LANGUAGE_CODE %}lang__item--active{% endif %}"
+          {% if code == LANGUAGE_CODE %}aria-current="true"{% endif %}
+          lang="{{ code }}"
+        >
+          {{ code|upper }}
+        </button>
+      </form>
+    {% endfor %}
+  </div>
+</div>

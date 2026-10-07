@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{{ site_settings.registration_closed_title }} — MyWay{% endblock %}
+
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static 'css/landing.css' %}" />
+  <meta name="robots" content="noindex, follow" />
+{% endblock %}
+
+{% block content %}
+  <section class="section">
+    <div class="container">
+      <div class="result">
+        <span class="result__icon result__icon--muted">
+          <svg width="26" height="26" aria-hidden="true"><use href="#i-clock" /></svg>
+        </span>
+
+        <h1 class="result__title">{{ site_settings.registration_closed_title }}</h1>
+        <p class="lead result__lead">{{ site_settings.registration_closed_message }}</p>
+
+        <div class="cta__actions">
+          <a class="btn btn--primary btn--lg" href="{% url 'contacts:contacts' %}">
+            {% translate "Написать нам" %}
+          </a>
+          <a class="btn btn--secondary btn--lg" href="{{ app_url }}/login">
+            {% translate "У меня уже есть аккаунт" %}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

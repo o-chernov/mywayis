@@ -1,0 +1,67 @@
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+  font-size: var(--text-base);
+  color: var(--text-primary);
+}
+
+.wrapper.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/*
+ * Инпут прячем визуально, но оставляем ненулевой размер: элементы 0×0
+ * выпадают из дерева доступности у части скринридеров.
+ */
+.input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  pointer-events: none;
+}
+
+.box {
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--bg-inset);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.check {
+  width: 10px;
+  height: 10px;
+  opacity: 0;
+  transform: scale(0.6);
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
+  color: #fff;
+}
+
+.input:checked + .box {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.input:checked + .box .check {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.input:focus-visible + .box {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

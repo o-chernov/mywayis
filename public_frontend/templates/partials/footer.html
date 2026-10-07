@@ -1,0 +1,61 @@
+{% load i18n %}
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="{% url 'pages:landing' %}">
+          <span class="brand__mark" aria-hidden="true">M</span>
+          <span class="brand__name">MyWay</span>
+        </a>
+        <p class="footer__tagline">
+          {% blocktranslate %}Аналитика рабочего времени для разработчиков и дизайнеров. Данные из WakaTime, понятные графики и сезонный турнир.{% endblocktranslate %}
+        </p>
+      </div>
+
+      <div>
+        <h2 class="footer__title">{% translate "Продукт" %}</h2>
+        <ul class="footer__list">
+          <li><a class="footer__link" href="{% url 'pages:features' %}">{% translate "Возможности" %}</a></li>
+          <li><a class="footer__link" href="{% url 'pages:pricing' %}">{% translate "Тарифы" %}</a></li>
+          <li><a class="footer__link" href="{% url 'pages:faq' %}">{% translate "Вопросы и ответы" %}</a></li>
+          <li><a class="footer__link" href="{{ app_url }}/login">{% translate "Личный кабинет" %}</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="footer__title">{% translate "Компания" %}</h2>
+        <ul class="footer__list">
+          <li><a class="footer__link" href="{% url 'pages:about' %}">{% translate "О проекте" %}</a></li>
+          <li><a class="footer__link" href="{% url 'contacts:contacts' %}">{% translate "Контакты" %}</a></li>
+          {% if site_settings.registration_open %}
+            <li><a class="footer__link" href="{% url 'accounts:register' %}">{% translate "Регистрация" %}</a></li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="footer__title">{% translate "Документы" %}</h2>
+        <ul class="footer__list">
+          {% for document in footer_documents %}
+            <li>
+              <a class="footer__link" href="{% url 'legal:document' document.slug %}">{{ document.title }}</a>
+            </li>
+          {% endfor %}
+          <li><a class="footer__link" href="{% url 'legal:index' %}">{% translate "Все документы" %}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>
+        © {% now "Y" %} MyWay{% if site_settings.company_name %} · {{ site_settings.company_name }}{% endif %}
+      </span>
+
+      <div class="footer__controls">
+        <a class="footer__link" href="mailto:{{ site_settings.contact_email }}">{{ site_settings.contact_email }}</a>
+        {% include "partials/lang_switch.html" %}
+        {% include "partials/theme_toggle.html" %}
+      </div>
+    </div>
+  </div>
+</footer>

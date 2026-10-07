@@ -1,0 +1,153 @@
+{
+  "app": {
+    "name": "MyWay",
+    "tagline": "Your path in numbers"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "integrations": "Integrations",
+    "leaderboard": "Leaderboard",
+    "messages": "Messages",
+    "settings": "Settings",
+    "profile": "My profile",
+    "logout": "Sign out"
+  },
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "confirm": "Confirm",
+    "continue": "Continue",
+    "back": "Back",
+    "next": "Next",
+    "done": "Done",
+    "skip": "Skip",
+    "later": "Later",
+    "retry": "Retry",
+    "edit": "Edit",
+    "delete": "Delete",
+    "remove": "Remove",
+    "add": "Add",
+    "search": "Search",
+    "filter": "Filters",
+    "reset": "Reset",
+    "showMore": "Show more",
+    "copy": "Copy",
+    "refresh": "Refresh",
+    "connect": "Connect",
+    "disconnect": "Disconnect",
+    "enable": "Enable",
+    "disable": "Disable",
+    "upgrade": "Get Pro",
+    "write": "Message",
+    "block": "Block",
+    "unblock": "Unblock",
+    "report": "Report",
+    "signIn": "Sign in",
+    "openMenu": "Open menu"
+  },
+  "states": {
+    "loading": "Loading…",
+    "empty": "Nothing here yet",
+    "error": "Something went wrong",
+    "errorHint": "Try reloading the page",
+    "notFound": "Page not found",
+    "notFoundHint": "The link may be outdated or the address mistyped",
+    "goHome": "Go to dashboard",
+    "saved": "Changes saved",
+    "saveFailed": "Could not save",
+    "unsavedChanges": "You have unsaved changes"
+  },
+  "duration": {
+    "zero": "0m",
+    "zeroLong": "no activity",
+    "hoursShort": "{{count}}h",
+    "minutesShort": "{{count}}m",
+    "hoursMinutesShort": "{{hours}}h {{minutes}}m",
+    "hoursLong_one": "{{count}} hour",
+    "hoursLong_other": "{{count}} hours",
+    "minutesLong_one": "{{count}} minute",
+    "minutesLong_other": "{{count}} minutes"
+  },
+  "units": {
+    "days_one": "{{count}} day",
+    "days_other": "{{count}} days",
+    "hours_one": "{{count}} hour",
+    "hours_other": "{{count}} hours",
+    "people_one": "{{count}} member",
+    "people_other": "{{count}} members",
+    "tags_one": "{{count}} tag",
+    "tags_other": "{{count}} tags"
+  },
+  "specialty": {
+    "label": "Specialty",
+    "placeholder": "Choose your specialty",
+    "backend": "Backend developer",
+    "frontend": "Frontend developer",
+    "fullstack": "Fullstack developer",
+    "mobile": "Mobile developer",
+    "devops": "DevOps engineer",
+    "data": "Data / ML engineer",
+    "qa": "QA engineer",
+    "design": "Designer",
+    "other": "Other",
+    "groups": {
+      "development": "Development",
+      "infrastructure": "Infrastructure & data",
+      "other": "Other"
+    }
+  },
+  "seasons": {
+    "winter": "Winter",
+    "spring": "Spring",
+    "summer": "Summer",
+    "autumn": "Autumn",
+    "current": "Current season",
+    "annual": "{{year}} annual results",
+    "range": "{{start}} — {{end}}",
+    "daysLeft": "{{days}} until season ends",
+    "finished": "Season finished",
+    "winterLabel": "Winter {{prev}}/{{year}}"
+  },
+  "plan": {
+    "free": "Free",
+    "pro": "Pro",
+    "proBadge": "Pro",
+    "proOnly": "Pro only",
+    "proPitch": "A daily breakdown of your stats from the AI agent, plus extended analytics."
+  },
+  "theme": {
+    "label": "Theme",
+    "system": "System",
+    "dark": "Dark",
+    "light": "Light",
+    "toggle": "Toggle theme"
+  },
+  "language": {
+    "label": "Language",
+    "ru": "Русский",
+    "en": "English",
+    "switch": "Change language"
+  },
+  "demo": {
+    "title": "Demo mode",
+    "persona": "Scenario",
+    "new": "New user",
+    "newHint": "No specialty or integrations — shows the full onboarding",
+    "free": "Free user",
+    "freeHint": "WakaTime connected, competing in the tournament",
+    "pro": "Pro user",
+    "proHint": "Active subscription and a working AI agent",
+    "reset": "Reset demo",
+    "resetDone": "Demo state reset",
+    "hide": "Hide panel",
+    "show": "Demo"
+  },
+  "a11y": {
+    "mainNavigation": "Main navigation",
+    "userMenu": "User menu",
+    "closeDialog": "Close dialog",
+    "sortBy": "Sort by {{column}}",
+    "notifications": "Notifications"
+  }
+}

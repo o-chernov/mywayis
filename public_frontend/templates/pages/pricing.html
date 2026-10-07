@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block title %}{% translate "Тарифы" %} — MyWay{% endblock %}
+{% block description %}{% translate "Free — вся аналитика и участие в турнире бесплатно. Pro — 490 ₽ в месяц: ежедневный разбор от AI-агента, углублённая аналитика и экспорт." %}{% endblock %}
+
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static 'css/landing.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <section class="section">
+    <div class="container">
+      <div class="section__head section__head--center">
+        <span class="eyebrow">{% translate "Тарифы" %}</span>
+        <h1>{% translate "Аналитика бесплатно, разбор — за деньги" %}</h1>
+        <p class="lead" style="margin-top: var(--space-4)">
+          {% blocktranslate %}Мы не прячем графики за подпиской: считать своё время должно быть бесплатно. Платить есть смысл, когда хочется не просто цифр, а объяснения.{% endblocktranslate %}
+        </p>
+      </div>
+
+      <div class="plans" style="max-width: 860px; margin: 0 auto">
+        <div class="plan">
+          <div class="plan__head"><span class="plan__name">Free</span></div>
+          <div class="plan__price">
+            <span class="plan__amount">0 ₽</span>
+            <span class="plan__period">{% translate "навсегда" %}</span>
+          </div>
+          <p class="plan__note">{% translate "Без ограничения по времени и без привязки карты" %}</p>
+
+          <div class="plan__features">
+            <div class="plan__feature"><svg width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>{% translate "Дашборд и все графики" %}</div>
+            <div class="plan__feature"><svg width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>{% translate "Тепловая карта продуктивных часов" %}</div>
+            <div class="plan__feature"><svg width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>{% translate "Участие в сезонном турнире" %}</div>
+            <div class="plan__feature"><svg width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>{% translate "История всех прошлых сезонов" %}</div>
+            <div class="plan__feature"><svg width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>{% translate "Переписка с участниками" %}</div>
+            <div class="plan__feature"><svg width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>{% translate "Простые автоматические наблюдения" %}</div>
+            <div class="plan__feature plan__feature--off"><svg width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>{% translate "Ежедневный разбор от AI-агента" %}</div>
+            <div class="plan__feature plan__feature--off"><svg width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>{% translate "Экспорт статистики" %}</div>
+          </div>
+
+          {% if site_settings.registration_open %}
+            <a class="btn btn--secondary btn--block" href="{% url 'accounts:register' %}">{% translate "Начать бесплатно" %}</a>
+          {% endif %}
+        </div>
+
+        <div class="plan plan--featured">
+          <div class="plan__head">
+            <span class="plan__name">Pro</span>
+            <span class="badge badge--accent">{% translate "Всё из Free" %}</span>
+          </div>
+          <div class="plan__price">
+            <span class="plan__amount">490 ₽</span>
+            <span class="plan__period">{% translate "в месяц" %}</span>
+          </div>
+          <p class="plan__note">{% translate "или 4 900 ₽ в год — два месяца в подарок" %}</p>
+
+          <div class="plan__features">
+            <div class="plan__feature"><svg width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>{% translate "Всё, что есть в Free" %}</div>
+            <div class="plan__feature"><svg width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>{% translate "Ежедневный разбор от AI-агента" %}</div>
+            <div class="plan__feature"><svg width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>{% translate "Вопросы агенту в чате" %}</div>
+            <div class="plan__feature"><svg width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>{% translate "Углублённая аналитика и сравнение периодов" %}</div>
+            <div class="plan__feature"><svg width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>{% translate "Экспорт статистики" %}</div>
+            <div class="plan__feature"><svg width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>{% translate "Приоритетный ответ поддержки" %}</div>
+          </div>
+
+          {% if site_settings.registration_open %}
+            <a class="btn btn--primary btn--block" href="{% url 'accounts:register' %}">{% translate "Начать с Free и перейти позже" %}</a>
+          {% endif %}
+        </div>
+      </div>
+
+      <p class="muted" style="text-align: center; margin-top: var(--space-6); font-size: 14px">
+        {% blocktranslate %}Pro подключается внутри личного кабинета. Оплата российскими картами и через СБП.{% endblocktranslate %}
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section__head">
+        <h2>{% translate "Об оплате" %}</h2>
+      </div>
+
+      <div class="faq" data-faq>
+        <details class="faq__item">
+          <summary class="faq__question">{% translate "Нужно ли привязывать карту для Free?" %}</summary>
+          <div class="faq__answer">{% translate "Нет. Бесплатный тариф не требует ни карты, ни платёжных данных вообще." %}</div>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">{% translate "Что будет с данными, если отменить Pro?" %}</summary>
+          <div class="faq__answer">
+            {% blocktranslate %}Аккаунт перейдёт на Free в конце оплаченного периода. Вся статистика, история сезонов и переписка сохраняются — закрываются только возможности Pro.{% endblocktranslate %}
+          </div>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">{% translate "Можно ли вернуть деньги?" %}</summary>
+          <div class="faq__answer">
+            {% url 'legal:document' 'refund' as refund_url %}
+            {% blocktranslate %}Да, условия описаны в <a class="link" href="{{ refund_url }}">политике возврата средств</a>. Если сервис не подошёл, напишите нам — разберёмся.{% endblocktranslate %}
+          </div>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">{% translate "Есть ли скидки для команд?" %}</summary>
+          <div class="faq__answer">
+            {% url 'contacts:contacts' as contacts_url %}
+            {% blocktranslate %}Пока нет отдельного командного тарифа, но если вам нужно несколько аккаунтов — <a class="link" href="{{ contacts_url }}">напишите</a>, договоримся.{% endblocktranslate %}
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+{% endblock %}

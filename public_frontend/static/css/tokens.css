@@ -1,0 +1,193 @@
+﻿/*
+ * СКОПИРОВАНО из app_frontend/src/styles/tokens.css — не редактировать здесь.
+ * Источник правды у кабинета; при изменении палитры обновить оба файла.
+ * Дублирование осознанное: тянуть сборщик в Django ради одного файла дороже,
+ * чем изредка синхронизировать вручную.
+ */
+:root {
+  /* — Поверхности — */
+  --bg-base: #0b0c10;
+  --bg-surface: #131520;
+  --bg-surface-2: #1a1d2b;
+  --bg-elevated: #1f2333;
+  --bg-inset: #0e1017;
+  --bg-overlay: rgba(6, 7, 11, 0.72);
+
+  /* — Границы — */
+  --border-subtle: #232739;
+  --border-default: #2e3348;
+  --border-strong: #414863;
+
+  /* — Текст — */
+  --text-primary: #eef0f6;
+  --text-secondary: #a8aec4;
+  --text-muted: #6f7691;
+  --text-on-accent: #ffffff;
+
+  /* — Акцент — */
+  --accent: #7c5cff;
+  --accent-hover: #8f74ff;
+  --accent-active: #6c48f5;
+  --accent-subtle: rgba(124, 92, 255, 0.16);
+  --accent-border: rgba(124, 92, 255, 0.42);
+  --accent-ring: rgba(124, 92, 255, 0.45);
+  --accent-text: #b7a4ff;
+
+  /* — Семантика — */
+  --success: #35c98b;
+  --success-subtle: rgba(53, 201, 139, 0.14);
+  --success-text: #56d9a2;
+  --warning: #e0a33a;
+  --warning-subtle: rgba(224, 163, 58, 0.14);
+  --warning-text: #edb75a;
+  --danger: #ef5a6f;
+  --danger-subtle: rgba(239, 90, 111, 0.14);
+  --danger-text: #ff7b8d;
+  --info: #4d9bf5;
+  --info-subtle: rgba(77, 155, 245, 0.14);
+  --info-text: #74b1f7;
+
+  /* — Палитра данных: языки, проекты, категории — */
+  --viz-1: #7c5cff;
+  --viz-2: #35c98b;
+  --viz-3: #4d9bf5;
+  --viz-4: #e0a33a;
+  --viz-5: #ef5a6f;
+  --viz-6: #2ec5c5;
+  --viz-7: #d16be5;
+  --viz-8: #8a93ad;
+
+  /* Шкала интенсивности для тепловой карты (0 — нет активности) */
+  --heat-0: #171a26;
+  --heat-1: rgba(124, 92, 255, 0.24);
+  --heat-2: rgba(124, 92, 255, 0.44);
+  --heat-3: rgba(124, 92, 255, 0.68);
+  --heat-4: rgba(124, 92, 255, 0.95);
+
+  /* — Металлы для пьедестала лидерборда — */
+  --medal-gold: #e8b923;
+  --medal-silver: #a9b3c6;
+  --medal-bronze: #c07f43;
+
+  /* — Радиусы — */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 999px;
+
+  /* — Отступы, шаг 4px — */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* — Типографика — */
+  --font-sans:
+    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Cascadia Mono', Consolas, 'Liberation Mono', monospace;
+
+  --text-xs: 11px;
+  --text-sm: 12px;
+  --text-base: 13px;
+  --text-md: 14px;
+  --text-lg: 16px;
+  --text-xl: 20px;
+  --text-2xl: 26px;
+  --text-3xl: 34px;
+
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  /* — Тени — */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.55);
+
+  /* — Слои — */
+  --z-sticky: 10;
+  --z-dropdown: 100;
+  --z-modal: 200;
+  --z-tour: 300;
+  --z-toast: 400;
+
+  /* — Анимация — */
+  --transition-fast: 120ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* — Размеры каркаса — */
+  --sidebar-width: 232px;
+  --topbar-height: 56px;
+  --content-max: 1320px;
+}
+
+:root[data-theme='light'] {
+  --bg-base: #f6f7fa;
+  --bg-surface: #ffffff;
+  --bg-surface-2: #f1f2f7;
+  --bg-elevated: #ffffff;
+  --bg-inset: #eceef4;
+  --bg-overlay: rgba(23, 25, 35, 0.42);
+
+  --border-subtle: #e6e8ef;
+  --border-default: #d8dbe6;
+  --border-strong: #b9bfd0;
+
+  --text-primary: #14161f;
+  --text-secondary: #545b71;
+  --text-muted: #858ca3;
+  --text-on-accent: #ffffff;
+
+  --accent: #6544e8;
+  --accent-hover: #5738dc;
+  --accent-active: #4b2fc7;
+  --accent-subtle: rgba(101, 68, 232, 0.1);
+  --accent-border: rgba(101, 68, 232, 0.32);
+  --accent-ring: rgba(101, 68, 232, 0.35);
+  --accent-text: #5b3ce0;
+
+  --success: #12996a;
+  --success-subtle: rgba(18, 153, 106, 0.12);
+  --success-text: #0f8259;
+  --warning: #b47510;
+  --warning-subtle: rgba(180, 117, 16, 0.12);
+  --warning-text: #96620e;
+  --danger: #d4344c;
+  --danger-subtle: rgba(212, 52, 76, 0.1);
+  --danger-text: #bc2b41;
+  --info: #1f6fd0;
+  --info-subtle: rgba(31, 111, 208, 0.1);
+  --info-text: #1a5db0;
+
+  --viz-1: #6544e8;
+  --viz-2: #12996a;
+  --viz-3: #1f6fd0;
+  --viz-4: #b47510;
+  --viz-5: #d4344c;
+  --viz-6: #0f8f8f;
+  --viz-7: #a83bbd;
+  --viz-8: #6b7488;
+
+  --heat-0: #e9ebf2;
+  --heat-1: rgba(101, 68, 232, 0.2);
+  --heat-2: rgba(101, 68, 232, 0.42);
+  --heat-3: rgba(101, 68, 232, 0.66);
+  --heat-4: rgba(101, 68, 232, 0.92);
+
+  --medal-gold: #c9971a;
+  --medal-silver: #8b93a5;
+  --medal-bronze: #a4682f;
+
+  --shadow-sm: 0 1px 2px rgba(23, 25, 35, 0.08);
+  --shadow-md: 0 4px 16px rgba(23, 25, 35, 0.1);
+  --shadow-lg: 0 18px 48px rgba(23, 25, 35, 0.16);
+}
+

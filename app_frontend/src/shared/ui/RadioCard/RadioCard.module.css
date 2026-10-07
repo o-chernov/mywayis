@@ -1,0 +1,106 @@
+.group {
+  display: grid;
+  gap: var(--space-3);
+  /* fieldset по умолчанию рисует рамку и внутренние отступы — они тут лишние. */
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  cursor: pointer;
+  transition:
+    border-color var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.card:hover:not(.disabled) {
+  border-color: var(--border-strong);
+}
+
+.card.selected {
+  border-color: var(--accent);
+  background: var(--accent-subtle);
+}
+
+.card.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* См. комментарий в Checkbox: 0×0 ломает дерево доступности. */
+.input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  pointer-events: none;
+}
+
+.marker {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-inset);
+  flex-shrink: 0;
+  margin-top: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    border-color var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.selected .marker {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.marker::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.selected .marker::after {
+  opacity: 1;
+}
+
+.input:focus-visible + .marker {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.title {
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.description {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-normal);
+}

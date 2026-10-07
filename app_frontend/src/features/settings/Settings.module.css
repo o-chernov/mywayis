@@ -1,0 +1,299 @@
+.layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.nav {
+  position: sticky;
+  top: calc(var(--topbar-height) + var(--space-6));
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 720px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.rowThree {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.divider {
+  height: 1px;
+  background: var(--border-subtle);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding-top: var(--space-2);
+}
+
+.dirtyHint {
+  font-size: var(--text-sm);
+  color: var(--warning-text);
+  margin-right: auto;
+}
+
+/* — Аватар — */
+.avatarRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.avatarActions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-items: flex-start;
+}
+
+.avatarHint {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* — Строка настройки с тумблером — */
+.toggleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-6);
+  padding: var(--space-3) 0;
+}
+
+.toggleRow + .toggleRow {
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* — Матрица уведомлений — */
+.matrix {
+  width: 100%;
+}
+
+.matrix th {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  text-align: center;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.matrix th:first-child {
+  text-align: left;
+}
+
+.matrix td {
+  padding: var(--space-3);
+  border-bottom: 1px solid var(--border-subtle);
+  text-align: center;
+  vertical-align: top;
+}
+
+.matrix td:first-child {
+  text-align: left;
+  width: 100%;
+}
+
+.matrix tr:last-child td {
+  border-bottom: none;
+}
+
+.matrixEvent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.matrixEventName {
+  font-size: var(--text-base);
+  color: var(--text-primary);
+}
+
+.matrixEventHint {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.quietRow {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-3);
+}
+
+.quietField {
+  width: 120px;
+}
+
+/* — Сессии и чёрный список — */
+.listRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+}
+
+.listRow + .listRow {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.listText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.listTitle {
+  font-size: var(--text-base);
+  color: var(--text-primary);
+}
+
+.listHint {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.listAction {
+  margin-left: auto;
+}
+
+/* — Опасная зона — */
+.danger {
+  border-color: var(--danger);
+}
+
+.dangerRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.dangerText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dangerTitle {
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.dangerHint {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  max-width: 60ch;
+}
+
+/* — Подписка — */
+.planHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.planBadge {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-subtle);
+  color: var(--accent-text);
+  flex-shrink: 0;
+}
+
+.planText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.planName {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.planMeta {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.planAction {
+  margin-left: auto;
+}
+
+.features {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+}
+
+.featureIcon {
+  flex-shrink: 0;
+}
+
+.featureIncluded {
+  color: var(--success-text);
+}
+
+.featureLocked {
+  color: var(--text-muted);
+}
+
+.featurePlan {
+  margin-left: auto;
+}
+
+.priceCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.price {
+  font-family: var(--font-mono);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.providers {
+  display: grid;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}

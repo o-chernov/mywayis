@@ -1,0 +1,414 @@
+{% extends "base.html" %}
+{% load static i18n %}
+
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static 'css/landing.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+  {# ── Первый экран ───────────────────────────────────────────────── #}
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <span class="eyebrow">{% translate "Аналитика времени в коде" %}</span>
+
+        <h1 class="hero__title">{% translate "Считайте не задачи, а часы в коде" %}</h1>
+
+        <p class="lead hero__lead">
+          {% blocktranslate %}MyWay забирает данные из WakaTime и превращает их в понятные графики: куда уходит день, на какие языки и проекты, в какие часы вы работаете лучше всего. И ставит вас в сезонный турнир с другими разработчиками и дизайнерами.{% endblocktranslate %}
+        </p>
+
+        <div class="hero__actions">
+          {% if site_settings.registration_open %}
+            <a class="btn btn--primary btn--lg" href="{% url 'accounts:register' %}">
+              {% translate "Начать бесплатно" %}
+            </a>
+          {% else %}
+            <a class="btn btn--primary btn--lg" href="{% url 'contacts:contacts' %}">
+              {% translate "Сообщить, когда откроем" %}
+            </a>
+          {% endif %}
+          <a class="btn btn--secondary btn--lg" href="#how">{% translate "Как это работает" %}</a>
+        </div>
+
+        <p class="hero__note">
+          <svg width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>
+          {% translate "Бесплатный тариф без ограничения по времени. Карта не нужна." %}
+        </p>
+
+        <div class="hero__facts">
+          <div class="fact">
+            <span class="fact__value">4</span>
+            <span class="fact__label">{% translate "сезона в году" %}</span>
+          </div>
+          <div class="fact">
+            <span class="fact__value">1 {% translate "минута" %}</span>
+            <span class="fact__label">{% translate "на подключение" %}</span>
+          </div>
+          <div class="fact">
+            <span class="fact__value">0 ₽</span>
+            <span class="fact__label">{% translate "базовый тариф" %}</span>
+          </div>
+        </div>
+      </div>
+
+      <div>{% include "partials/preview.html" %}</div>
+    </div>
+  </section>
+
+  {# ── Проблема и решение ─────────────────────────────────────────── #}
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section__head section__head--center">
+        <span class="eyebrow">{% translate "Зачем это нужно" %}</span>
+        <h2>{% translate "В пятницу вечером сложно ответить, куда ушла неделя" %}</h2>
+        <p class="lead" style="margin-top: var(--space-4)">
+          {% blocktranslate %}Таск-трекер показывает закрытые задачи, а не потраченное время. Ощущения врут: день, который казался пустым, часто оказывается самым продуктивным.{% endblocktranslate %}
+        </p>
+      </div>
+
+      <div class="split">
+        <div class="split__col split__col--problem">
+          <span class="split__label">{% translate "Как обычно" %}</span>
+          <ul class="checklist">
+            <li>
+              <svg class="checklist__mark" width="15" height="15" aria-hidden="true"><use href="#i-alert" /></svg>
+              {% translate "Оценка загрузки на глаз — и разговор с заказчиком о сроках на том же уровне" %}
+            </li>
+            <li>
+              <svg class="checklist__mark" width="15" height="15" aria-hidden="true"><use href="#i-alert" /></svg>
+              {% translate "Непонятно, какая технология съедает время, а какая только кажется тяжёлой" %}
+            </li>
+            <li>
+              <svg class="checklist__mark" width="15" height="15" aria-hidden="true"><use href="#i-alert" /></svg>
+              {% translate "Продуктивные часы неизвестны, поэтому созвоны попадают ровно на них" %}
+            </li>
+            <li>
+              <svg class="checklist__mark" width="15" height="15" aria-hidden="true"><use href="#i-alert" /></svg>
+              {% translate "Прогресс за год не виден: кажется, что стоишь на месте" %}
+            </li>
+          </ul>
+        </div>
+
+        <div class="split__col split__col--solution">
+          <span class="split__label">{% translate "С MyWay" %}</span>
+          <ul class="checklist checklist--positive">
+            <li>
+              <svg class="checklist__mark" width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>
+              {% translate "Точные часы по дням, языкам и проектам — данные собираются сами" %}
+            </li>
+            <li>
+              <svg class="checklist__mark" width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>
+              {% translate "Тепловая карта показывает ваши реальные пики продуктивности" %}
+            </li>
+            <li>
+              <svg class="checklist__mark" width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>
+              {% translate "Сезонный турнир превращает рутину в понятную цель" %}
+            </li>
+            <li>
+              <svg class="checklist__mark" width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>
+              {% translate "История сезонов показывает движение за год, а не только за неделю" %}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ── Как это работает ───────────────────────────────────────────── #}
+  <section class="section" id="how">
+    <div class="container">
+      <div class="section__head section__head--center">
+        <span class="eyebrow">{% translate "Как это работает" %}</span>
+        <h2>{% translate "Три шага и минута времени" %}</h2>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <h3 class="step__title">{% translate "Подключите WakaTime" %}</h3>
+          <p class="step__text">
+            {% blocktranslate %}Нужен только API-ключ из личного кабинета WakaTime. Плагин у вас, скорее всего, уже стоит — он есть почти для всех редакторов.{% endblocktranslate %}
+          </p>
+        </div>
+
+        <div class="step">
+          <h3 class="step__title">{% translate "Выберите, что считать" %}</h3>
+          <p class="step__text">
+            {% blocktranslate %}Мы предложим набор тегов по вашей специальности. Лишнее снимите, своё добавьте — хоть время в играх, оно будет считаться отдельно.{% endblocktranslate %}
+          </p>
+        </div>
+
+        <div class="step">
+          <h3 class="step__title">{% translate "Смотрите аналитику" %}</h3>
+          <p class="step__text">
+            {% blocktranslate %}Первые графики появятся через пару минут: мы подтянем историю за последние 90 дней, а дальше данные обновляются сами.{% endblocktranslate %}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ── Возможности ────────────────────────────────────────────────── #}
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section__head section__head--center">
+        <span class="eyebrow">{% translate "Возможности" %}</span>
+        <h2>{% translate "Что внутри" %}</h2>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card card--hover">
+          <span class="card__icon"><svg width="19" height="19" aria-hidden="true"><use href="#i-chart" /></svg></span>
+          <h3 class="card__title">{% translate "Графики без лишнего" %}</h3>
+          <p class="card__text">
+            {% blocktranslate %}Активность по дням, доли языков, топ проектов и тепловая карта часов. Всё на одном экране, без настройки дашбордов.{% endblocktranslate %}
+          </p>
+        </article>
+
+        <article class="card card--hover">
+          <span class="card__icon"><svg width="19" height="19" aria-hidden="true"><use href="#i-trophy" /></svg></span>
+          <h3 class="card__title">{% translate "Сезонный турнир" %}</h3>
+          <p class="card__text">
+            {% blocktranslate %}Таблица участников с фильтрами по специальности, языку и стране. Участие добровольное и выключается в один клик.{% endblocktranslate %}
+          </p>
+        </article>
+
+        <article class="card card--hover">
+          <span class="card__icon"><svg width="19" height="19" aria-hidden="true"><use href="#i-sparkle" /></svg></span>
+          <h3 class="card__title">{% translate "AI-агент" %}</h3>
+          <p class="card__text">
+            {% blocktranslate %}Каждое утро разбирает вчерашний день: что изменилось, где просела концентрация, какой день выбился из ритма. Тариф Pro.{% endblocktranslate %}
+          </p>
+        </article>
+
+        <article class="card card--hover">
+          <span class="card__icon"><svg width="19" height="19" aria-hidden="true"><use href="#i-message" /></svg></span>
+          <h3 class="card__title">{% translate "Общение с коллегами" %}</h3>
+          <p class="card__text">
+            {% blocktranslate %}Переписка с участниками турнира. Тихий режим и чёрный список — на случай, если общение оказалось лишним.{% endblocktranslate %}
+          </p>
+        </article>
+
+        <article class="card card--hover">
+          <span class="card__icon"><svg width="19" height="19" aria-hidden="true"><use href="#i-plug" /></svg></span>
+          <h3 class="card__title">{% translate "Интеграции" %}</h3>
+          <p class="card__text">
+            {% blocktranslate %}Сейчас WakaTime. В планах GitHub, GitLab, Figma, Jira и Toggl — чтобы учитывать и то, что не видит редактор.{% endblocktranslate %}
+          </p>
+        </article>
+
+        <article class="card card--hover">
+          <span class="card__icon"><svg width="19" height="19" aria-hidden="true"><use href="#i-shield" /></svg></span>
+          <h3 class="card__title">{% translate "Вы решаете, что видно" %}</h3>
+          <p class="card__text">
+            {% blocktranslate %}Профиль можно закрыть, город скрыть, из таблицы выйти. Названия файлов и содержимое кода мы не собираем в принципе.{% endblocktranslate %}
+          </p>
+        </article>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px">
+        <a class="btn btn--secondary" href="{% url 'pages:features' %}">
+          {% translate "Подробнее о возможностях" %}
+          <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow-right" /></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {# ── Турнир и сезоны ────────────────────────────────────────────── #}
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">{% translate "Турнир" %}</span>
+        <h2>{% translate "Год делится на четыре сезона" %}</h2>
+        <p class="lead" style="margin-top: var(--space-4)">
+          {% blocktranslate %}Сезон длится одно время года. В конце счётчики обнуляются, а результат уходит в историю — так у новых участников есть шанс, а у старых остаётся, чем гордиться. После четвёртого сезона подводим итог года.{% endblocktranslate %}
+        </p>
+      </div>
+
+      <div class="seasons">
+        <div class="season">
+          <span class="season__name">{% translate "Зима" %}</span>
+          <span class="season__range">{% translate "1 дек — 28 фев" %}</span>
+        </div>
+        <div class="season">
+          <span class="season__name">{% translate "Весна" %}</span>
+          <span class="season__range">{% translate "1 мар — 31 мая" %}</span>
+        </div>
+        <div class="season">
+          <span class="season__name">{% translate "Лето" %}</span>
+          <span class="season__range">{% translate "1 июн — 31 авг" %}</span>
+        </div>
+        <div class="season">
+          <span class="season__name">{% translate "Осень" %}</span>
+          <span class="season__range">{% translate "1 сен — 30 ноя" %}</span>
+        </div>
+      </div>
+
+      <p class="muted" style="margin-top: var(--space-5); font-size: 14px">
+        {% blocktranslate %}Итоги года подводятся 1 декабря по четырём завершившимся сезонам.{% endblocktranslate %}
+      </p>
+    </div>
+  </section>
+
+  {# ── Тарифы ─────────────────────────────────────────────────────── #}
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section__head section__head--center">
+        <span class="eyebrow">{% translate "Тарифы" %}</span>
+        <h2>{% translate "Бесплатно навсегда, Pro — по желанию" %}</h2>
+      </div>
+
+      <div class="plans" style="max-width: 860px; margin: 0 auto">
+        <div class="plan">
+          <div class="plan__head">
+            <span class="plan__name">Free</span>
+          </div>
+          <div class="plan__price">
+            <span class="plan__amount">0 ₽</span>
+            <span class="plan__period">{% translate "навсегда" %}</span>
+          </div>
+          <div class="plan__features">
+            <div class="plan__feature">
+              <svg width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>
+              {% translate "Дашборд и все графики" %}
+            </div>
+            <div class="plan__feature">
+              <svg width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>
+              {% translate "Участие в турнире" %}
+            </div>
+            <div class="plan__feature">
+              <svg width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>
+              {% translate "Переписка с участниками" %}
+            </div>
+            <div class="plan__feature">
+              <svg width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>
+              {% translate "История сезонов" %}
+            </div>
+          </div>
+          {% if site_settings.registration_open %}
+            <a class="btn btn--secondary btn--block" href="{% url 'accounts:register' %}">
+              {% translate "Начать бесплатно" %}
+            </a>
+          {% else %}
+            <a class="btn btn--secondary btn--block" href="{% url 'pages:pricing' %}">
+              {% translate "Что входит в Free" %}
+            </a>
+          {% endif %}
+        </div>
+
+        <div class="plan plan--featured">
+          <div class="plan__head">
+            <span class="plan__name">Pro</span>
+            <span class="badge badge--accent">{% translate "Всё из Free и сверх того" %}</span>
+          </div>
+          <div class="plan__price">
+            <span class="plan__amount">490 ₽</span>
+            <span class="plan__period">{% translate "в месяц" %}</span>
+          </div>
+          <p class="plan__note">{% translate "или 4 900 ₽ в год — два месяца в подарок" %}</p>
+          <div class="plan__features">
+            <div class="plan__feature">
+              <svg width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>
+              {% translate "Ежедневный разбор от AI-агента" %}
+            </div>
+            <div class="plan__feature">
+              <svg width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>
+              {% translate "Вопросы агенту в чате" %}
+            </div>
+            <div class="plan__feature">
+              <svg width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>
+              {% translate "Углублённая аналитика и сравнения" %}
+            </div>
+            <div class="plan__feature">
+              <svg width="15" height="15" aria-hidden="true"><use href="#i-check" /></svg>
+              {% translate "Экспорт статистики" %}
+            </div>
+          </div>
+          <a class="btn btn--primary btn--block" href="{% url 'pages:pricing' %}">
+            {% translate "Что входит в Pro" %}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {# ── Частые вопросы ─────────────────────────────────────────────── #}
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">{% translate "Вопросы" %}</span>
+        <h2>{% translate "О чём спрашивают чаще всего" %}</h2>
+      </div>
+
+      <div class="faq" data-faq>
+        <details class="faq__item">
+          <summary class="faq__question">{% translate "Что такое WakaTime и обязательно ли его подключать?" %}</summary>
+          <div class="faq__answer">
+            {% blocktranslate %}WakaTime — плагин для редактора, который считает время работы. Он бесплатный и есть почти для всех IDE. Без него MyWay нечего показывать: свои данные мы не собираем, а берём готовые.{% endblocktranslate %}
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">{% translate "Вы видите мой код?" %}</summary>
+          <div class="faq__answer">
+            {% blocktranslate %}Нет. Мы получаем только агрегаты: сколько минут, на каком языке, в каком проекте. Содержимое файлов и их имена в MyWay не передаются и нигде не хранятся.{% endblocktranslate %}
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">{% translate "Можно не участвовать в турнире?" %}</summary>
+          <div class="faq__answer">
+            {% blocktranslate %}Да, участие добровольное и выключается тумблером в разделе «Интеграции». Аналитика при этом остаётся полностью — она вообще не связана с таблицей.{% endblocktranslate %}
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">{% translate "Что происходит с моей статистикой в конце сезона?" %}</summary>
+          <div class="faq__answer">
+            {% blocktranslate %}Счётчик турнира обнуляется, а результат сохраняется в истории. Личная аналитика не сбрасывается никогда — вы всегда видите любой период.{% endblocktranslate %}
+          </div>
+        </details>
+      </div>
+
+      <div style="margin-top: 32px">
+        <a class="btn btn--secondary" href="{% url 'pages:faq' %}">
+          {% translate "Все вопросы" %}
+          <svg width="15" height="15" aria-hidden="true"><use href="#i-arrow-right" /></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {# ── Финальный призыв ───────────────────────────────────────────── #}
+  <section class="section section--tight">
+    <div class="container">
+      <div class="cta">
+        {% if site_settings.registration_open %}
+          <h2 class="cta__title">{% translate "Начните считать своё время" %}</h2>
+          <p class="lead cta__lead">
+            {% blocktranslate %}Регистрация занимает минуту, подключение WakaTime — ещё одну. Первые графики появятся сегодня же.{% endblocktranslate %}
+          </p>
+          <div class="cta__actions">
+            <a class="btn btn--primary btn--lg" href="{% url 'accounts:register' %}">
+              {% translate "Создать аккаунт" %}
+            </a>
+            <a class="btn btn--secondary btn--lg" href="{% url 'pages:pricing' %}">
+              {% translate "Посмотреть тарифы" %}
+            </a>
+          </div>
+        {% else %}
+          <h2 class="cta__title">{{ site_settings.registration_closed_title }}</h2>
+          <p class="lead cta__lead">{{ site_settings.registration_closed_message }}</p>
+          <div class="cta__actions">
+            <a class="btn btn--primary btn--lg" href="{% url 'contacts:contacts' %}">
+              {% translate "Написать нам" %}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

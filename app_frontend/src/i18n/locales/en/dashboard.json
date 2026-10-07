@@ -1,0 +1,91 @@
+{
+  "greeting": {
+    "morning": "Good morning, {{name}}",
+    "day": "Good afternoon, {{name}}",
+    "evening": "Good evening, {{name}}",
+    "night": "Still up, {{name}}?"
+  },
+  "subtitle": "A summary of your time in code",
+  "period": {
+    "label": "Period",
+    "today": "Today",
+    "week": "7 days",
+    "month": "30 days",
+    "season": "Season"
+  },
+  "sync": {
+    "updated": "Updated {{time}}",
+    "refresh": "Refresh data",
+    "refreshed": "Data refreshed"
+  },
+  "empty": {
+    "title": "Your stats will show up here",
+    "description": "Connect WakaTime and within a minute this page fills with charts of languages, projects and active hours. All you need is an API key.",
+    "cta": "Connect WakaTime",
+    "noTags": "No tags selected",
+    "noTagsDescription": "WakaTime is connected, but nothing is being tracked — there is nothing to count. Pick the languages and tools you want in your stats.",
+    "noTagsCta": "Pick tags"
+  },
+  "kpi": {
+    "total": "Total for the period",
+    "average": "Daily average",
+    "best": "Best day",
+    "streak": "Current streak",
+    "streakValue_one": "{{count}} day",
+    "streakValue_other": "{{count}} days",
+    "vsPrevious": "vs previous period",
+    "noChange": "no change",
+    "activeDays": "active days: {{count}}"
+  },
+  "charts": {
+    "daily": "Daily activity",
+    "dailyHint": "Hours in the editor, by day",
+    "languages": "Languages",
+    "languagesHint": "Share of time for the period",
+    "projects": "Projects",
+    "projectsHint": "Top 5 by time",
+    "heatmap": "When you code",
+    "heatmapHint": "Active hours by day of week",
+    "other": "Other",
+    "noData": "No data for this period",
+    "less": "less",
+    "more": "more"
+  },
+  "weekdays": {
+    "mon": "Mon",
+    "tue": "Tue",
+    "wed": "Wed",
+    "thu": "Thu",
+    "fri": "Fri",
+    "sat": "Sat",
+    "sun": "Sun"
+  },
+  "insights": {
+    "title": "What the numbers say",
+    "hint": "Simple observations, computed automatically",
+    "peakHour": "Peak activity — {{weekday}}, {{from}}–{{to}}",
+    "topLanguage": "{{language}} took {{share}} of your time this period",
+    "weekendRatio": "Weekends account for {{share}} of all your time",
+    "streak": "You are on a {{days}} streak — better than 68% of members",
+    "topProject": "Most time went into \"{{project}}\": {{duration}}"
+  },
+  "ai": {
+    "teaserTitle": "AI review of your week",
+    "teaserText": "The agent reads your stats and tells you what actually changed and why: where focus dropped, which day broke the rhythm, what to fix in your schedule.",
+    "teaserCta": "Get Pro",
+    "reportTitle": "AI agent review",
+    "reportHint": "Latest report for {{period}}",
+    "openChat": "Open in messages",
+    "focus": "Focus"
+  },
+  "tournament": {
+    "title": "Your tournament standing",
+    "rank": "Rank {{rank}}",
+    "of": "of {{total}}",
+    "delta": "this week",
+    "notParticipating": "You are not in the tournament",
+    "notParticipatingHint": "You can join from the Integrations section",
+    "join": "Join",
+    "openLeaderboard": "Open leaderboard"
+  }
+}

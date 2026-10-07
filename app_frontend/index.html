@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1280" />
+    <meta name="color-scheme" content="dark light" />
+    <title>MyWay</title>
+    <script>
+      // Применяем тему до первой отрисовки, чтобы не было вспышки светлого фона.
+      (function () {
+        try {
+          var stored = localStorage.getItem('myway.theme');
+          var mode = stored ? JSON.parse(stored) : 'dark';
+          var resolved =
+            mode === 'system'
+              ? window.matchMedia('(prefers-color-scheme: light)').matches
+                ? 'light'
+                : 'dark'
+              : mode;
+          document.documentElement.setAttribute('data-theme', resolved);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="modal-root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
