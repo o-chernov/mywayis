@@ -9,7 +9,8 @@ from django.utils.translation import pgettext_lazy
 
 from apps.core.antispam import AntiSpamFormMixin
 
-# Ограничения повторяют схему бэкенда: username — VARCHAR(64), email — VARCHAR(320).
+# Лимиты — часть контракта регистрации с API (см. README): username до 64 символов,
+# email до 320. Схема пользователей в API должна их повторить.
 USERNAME_PATTERN = re.compile(r"^[a-zA-Z0-9](?:[a-zA-Z0-9._-]{1,62}[a-zA-Z0-9])?$")
 
 RESERVED_USERNAMES = {
